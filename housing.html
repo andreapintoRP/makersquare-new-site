@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Austin Housing for AI Bootcamp Builders — MakerSquare</title>
+<meta name="description" content="MakerSquare housing options in Austin, TX. Partner Airbnb discounts, furnished studios from $2,800/mo, shared houses from $1,600/mo. Neighborhood guides for bootcamp students.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.makersquare.ai/housing.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.makersquare.ai/housing.html">
+<meta property="og:title" content="Austin Housing — MakerSquare AI Bootcamp">
+<meta property="og:description" content="Partner housing discounts for MakerSquare students. Furnished studios, shared houses, boutique hotels near campus in Austin, TX.">
+<meta property="og:image" content="https://www.makersquare.ai/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── Housing-specific ── */
+.housing-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: var(--s4); margin-top: var(--s8); }
+.housing-stat { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-lg); padding: var(--s5); text-align: center; transition: all 0.3s ease; }
+.housing-stat:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.housing-stat-num { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--indigo); margin-bottom: 2px; }
+.housing-stat-label { font-size: 0.75rem; color: var(--text-muted); }
+
+.housing-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--s5); margin-top: var(--s9); }
+.housing-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); overflow: hidden; transition: all 0.3s ease; }
+.housing-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.housing-card--featured { border-color: var(--indigo); }
+.housing-card-top { padding: var(--s6); }
+.housing-badge { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-radius: var(--r-full); padding: 3px 10px; margin-bottom: var(--s3); }
+.housing-badge--popular { background: rgba(64,61,216,0.08); color: var(--indigo); border: 1px solid rgba(64,61,216,0.15); }
+.housing-badge--shared { background: var(--cloud); color: var(--azure); border: 1px solid var(--ice); }
+.housing-badge--hotel { background: var(--light-bg); color: var(--text-secondary); border: 1px solid rgba(24,24,73,0.06); }
+.housing-badge--custom { background: var(--light-bg); color: var(--text-muted); border: 1px solid rgba(24,24,73,0.06); }
+.housing-card h3 { font-size: 1.05rem; margin-bottom: var(--s2); }
+.housing-card-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+.housing-price-row { display: flex; align-items: baseline; gap: 6px; margin-top: var(--s3); }
+.housing-price { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--navy); }
+.housing-price-period { font-size: 0.82rem; color: var(--text-muted); }
+.housing-price-note { font-size: 0.72rem; color: var(--indigo); margin-top: 4px; }
+.housing-divider { height: 1px; background: rgba(24,24,73,0.06); }
+.housing-features { padding: var(--s5) var(--s6); display: flex; flex-direction: column; gap: 8px; }
+.housing-feature { display: flex; align-items: flex-start; gap: 8px; font-size: 0.82rem; color: var(--text-secondary); }
+.housing-feature::before { content: '\2713'; color: var(--green); font-weight: 700; font-size: 0.72rem; margin-top: 2px; flex-shrink: 0; }
+
+.hood-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s4); margin-top: var(--s8); }
+.hood-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-lg); padding: var(--s5); transition: all 0.3s ease; }
+.hood-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.hood-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+.hood-dist { font-size: 0.75rem; font-weight: 600; color: var(--indigo); margin-bottom: var(--s2); }
+.hood-desc { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
+
+.setup-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s5); margin-top: var(--s8); }
+.setup-step { text-align: center; }
+.setup-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--cloud); margin-bottom: var(--s2); }
+.setup-step h3 { font-size: 0.95rem; margin-bottom: var(--s2); }
+.setup-step p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+
+.page-cta { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s10); text-align: center; margin-top: var(--s10); }
+.page-cta h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: var(--s3); }
+.page-cta p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: var(--s6); max-width: 480px; margin-left: auto; margin-right: auto; }
+
+@media (max-width: 1024px) { .housing-grid { grid-template-columns: 1fr; } .hood-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { .housing-stats { grid-template-columns: 1fr 1fr; } .hood-grid, .setup-steps { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maker<span>Square</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#how-it-works">How it works</a></li>
+      <li><a href="index.html#who">Who it's for</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="housing.html" style="color:var(--navy);">Housing</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="apply.html">Apply</a></li>
+    </ul>
+    <a href="apply.html" class="btn btn-primary btn-arrow">Apply Now </a>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="index.html#how-it-works">How it works</a></li>
+    <li><a href="index.html#who">Who it's for</a></li>
+    <li><a href="curriculum.html">Curriculum</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="housing.html">Housing</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="apply.html">Apply</a></li>
+  </ul>
+  <a href="apply.html" class="btn btn-primary btn-block btn-lg" style="margin-top:24px;">Apply Now</a>
+</div>
+
+
+<!-- HERO -->
+<section class="section" style="padding-top:calc(var(--nav-height) + var(--s10));padding-bottom:var(--s9);">
+  <div class="container">
+    <div class="section-label reveal">Housing</div>
+    <h1 class="reveal" style="font-size:clamp(2rem,4vw,3rem);">Coming from out of town?<br><span class="text-gradient">We've got you covered.</span></h1>
+    <p class="section-sub reveal" style="max-width:640px;">Partnered with select Airbnb hosts near the program for discounted stays. Full list with booking codes shared after admission.</p>
+
+    <div class="housing-stats">
+      <div class="housing-stat reveal reveal-d1"><div class="housing-stat-num">~10 min</div><div class="housing-stat-label">From campus</div></div>
+      <div class="housing-stat reveal reveal-d2"><div class="housing-stat-num">10-20%</div><div class="housing-stat-label">Below standard Airbnb</div></div>
+      <div class="housing-stat reveal reveal-d3"><div class="housing-stat-num">4 wks</div><div class="housing-stat-label">Housing available</div></div>
+      <div class="housing-stat reveal reveal-d4"><div class="housing-stat-num">Wi-Fi</div><div class="housing-stat-label">Verified at each property</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- HOUSING OPTIONS -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-label reveal">Options</div>
+    <h2 class="reveal">Housing that fits how you <span class="text-accent">want to live.</span></h2>
+
+    <div class="housing-grid">
+      <!-- Studio -->
+      <div class="housing-card housing-card--featured reveal reveal-d1">
+        <div class="housing-card-top">
+          <div class="housing-badge housing-badge--popular">Most Popular</div>
+          <h3>Furnished Studio or 1BR</h3>
+          <div class="housing-card-desc">Private furnished apartment near campus with a dedicated workspace. Ideal for builders who want their own space evenings and weekends.</div>
+          <div class="housing-price-row"><div class="housing-price">~$2,800</div><div class="housing-price-period">/ month</div></div>
+          <div class="housing-price-note">MakerSquare rate. ~15% below standard pricing.</div>
+        </div>
+        <div class="housing-divider"></div>
+        <div class="housing-features">
+          <div class="housing-feature">Private workspace with 200+ Mbps internet</div>
+          <div class="housing-feature">Fully furnished, kitchen included</div>
+          <div class="housing-feature">Flexible check-in/out around program dates</div>
+          <div class="housing-feature">10-15 minute drive to campus</div>
+          <div class="housing-feature">Walking distance to coffee shops</div>
+        </div>
+      </div>
+
+      <!-- Shared -->
+      <div class="housing-card reveal reveal-d2">
+        <div class="housing-card-top">
+          <div class="housing-badge housing-badge--shared">Shared Option</div>
+          <h3>Shared House, Central Austin</h3>
+          <div class="housing-card-desc">Private room in a furnished home shared with 2-3 other MakerSquare builders. Built-in community, split costs.</div>
+          <div class="housing-price-row"><div class="housing-price">~$1,600</div><div class="housing-price-period">/ month</div></div>
+          <div class="housing-price-note">MakerSquare rate. Shared with enrolled students.</div>
+        </div>
+        <div class="housing-divider"></div>
+        <div class="housing-features">
+          <div class="housing-feature">Private bedroom, shared common areas</div>
+          <div class="housing-feature">High-speed internet throughout</div>
+          <div class="housing-feature">Shared study space and kitchen</div>
+          <div class="housing-feature">Housemates are fellow builders</div>
+          <div class="housing-feature">15 minute drive to campus</div>
+        </div>
+      </div>
+
+      <!-- Hotel -->
+      <div class="housing-card reveal reveal-d3">
+        <div class="housing-card-top">
+          <div class="housing-badge housing-badge--hotel">Weekly Stay</div>
+          <h3>Boutique Hotel Near Campus</h3>
+          <div class="housing-card-desc">Group rate at a well-located Austin boutique hotel. For builders who prefer a hotel experience.</div>
+          <div class="housing-price-row"><div class="housing-price">~$120</div><div class="housing-price-period">/ night</div></div>
+          <div class="housing-price-note">Group rate. Book through our housing coordinator.</div>
+        </div>
+        <div class="housing-divider"></div>
+        <div class="housing-features">
+          <div class="housing-feature">Daily housekeeping and concierge</div>
+          <div class="housing-feature">Flexible cancellation policy</div>
+          <div class="housing-feature">Business-grade internet</div>
+          <div class="housing-feature">Fitness center access</div>
+        </div>
+      </div>
+
+      <!-- Custom -->
+      <div class="housing-card reveal reveal-d4">
+        <div class="housing-card-top">
+          <div class="housing-badge housing-badge--custom">Custom</div>
+          <h3>Arrange Your Own</h3>
+          <div class="housing-card-desc">Many builders commute from within Austin or find their own rental. We share the campus location and neighborhood map after admission.</div>
+          <div class="housing-price-row"><div class="housing-price">&mdash;</div></div>
+          <div class="housing-price-note">No coordination needed.</div>
+        </div>
+        <div class="housing-divider"></div>
+        <div class="housing-features">
+          <div class="housing-feature">Full campus address shared post-admission</div>
+          <div class="housing-feature">Neighborhood recommendations provided</div>
+          <div class="housing-feature">Parking info available</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- NEIGHBORHOODS -->
+<section class="section">
+  <div class="container">
+    <div class="section-label reveal">Location</div>
+    <h2 class="reveal">Best Austin neighborhoods <span class="text-accent">for builders.</span></h2>
+
+    <div class="hood-grid">
+      <div class="hood-card reveal reveal-d1"><div class="hood-name">East Austin</div><div class="hood-dist">~10 min to campus</div><div class="hood-desc">Coffee shops, coworking, walkable. Most popular with MakerSquare builders.</div></div>
+      <div class="hood-card reveal reveal-d2"><div class="hood-name">South Congress</div><div class="hood-dist">~15 min to campus</div><div class="hood-desc">Great food, quieter pace, easy parking. SoCo feel.</div></div>
+      <div class="hood-card reveal reveal-d3"><div class="hood-name">Mueller / Hyde Park</div><div class="hood-dist">~12 min to campus</div><div class="hood-desc">Walkable, family-friendly, quieter residential streets.</div></div>
+      <div class="hood-card reveal reveal-d4"><div class="hood-name">Domain / North Austin</div><div class="hood-dist">~20 min to campus</div><div class="hood-desc">Suburban, bigger apartments, good for families.</div></div>
+      <div class="hood-card reveal reveal-d5"><div class="hood-name">Downtown / Rainey St</div><div class="hood-dist">~10 min to campus</div><div class="hood-desc">Nightlife, networking, higher cost. Central to everything.</div></div>
+      <div class="hood-card reveal reveal-d6"><div class="hood-name">South Lamar</div><div class="hood-dist">~15 min to campus</div><div class="hood-desc">Residential quiet, restaurant corridor, good balance.</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- HOW TO SET UP -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Getting set up</div>
+      <h2 class="reveal">Three steps. <span class="text-accent">We handle the rest.</span></h2>
+    </div>
+
+    <div class="setup-steps">
+      <div class="setup-step reveal reveal-d1"><div class="setup-num">01</div><h3>Tell us your preference</h3><p>Private studio, shared house, or hotel. Budget, dates, any requirements.</p></div>
+      <div class="setup-step reveal reveal-d2"><div class="setup-num">02</div><h3>Receive matched listings</h3><p>Curated options with MakerSquare discount codes. All vetted for Wi-Fi and workspace.</p></div>
+      <div class="setup-step reveal reveal-d3"><div class="setup-num">03</div><h3>Book directly, arrive ready</h3><p>You book with the host. We confirm everything is set before Day 1.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Housing FAQ</div>
+      <h2 class="reveal">Common <span class="text-accent">questions.</span></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-question">Do I need to arrange housing to attend?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">No. Many builders live in or near Austin already. Housing assistance is for those relocating temporarily for the program.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">When should I book?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Wait until you're admitted. We share the full partner list with discount codes after admission. Booking 3-4 weeks before Day 1 is typical.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Can I extend my stay beyond the program?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. Most hosts offer extended stay rates. Many builders stay an extra week or two to explore Austin after Demo Day.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Is there a housing fee from MakerSquare?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">No. Housing is between you and the host. We negotiate discounts and vet properties, but there's no MakerSquare fee on top.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Are there family-friendly options?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. Several partner properties accommodate families. Let us know your situation and we'll match you with the right listings.</div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="page-cta reveal">
+      <h3>Questions about housing?</h3>
+      <p>Our housing coordinator can help you find the right option.</p>
+      <a href="mailto:housing@makersquare.ai" class="btn btn-primary btn-lg">Email housing@makersquare.ai</a>
+      <p style="margin-top:var(--s5);font-size:0.85rem;color:var(--text-muted);">Or apply first and we'll walk you through options after admission.</p>
+      <a href="apply.html" class="btn btn-ghost btn-arrow" style="margin-top:var(--s3);">Apply now </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <a href="index.html" class="footer-logo">Maker<span>Square</span></a>
+    <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    <div class="footer-copy">&copy; 2026 MakerSquare LLC. Austin, TX.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="text/javascript" src="https://forms.zoho.com/js/zf_gclid.js"> </script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq885ea214ffc25f4f452068cc9bc1cec4353b0ff61817b77233444928d383fe96" defer></script>
+</body>
+</html>
