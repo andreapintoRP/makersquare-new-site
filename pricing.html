@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Bootcamp Pricing — MakerSquare Austin | $5,999</title>
+<meta name="description" content="MakerSquare AI bootcamp tuition is $5,999 for the founding cohort. Flexible payment plans available. 4-week in-person program in Austin, TX. No income share agreements.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.makersquare.ai/pricing.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.makersquare.ai/pricing.html">
+<meta property="og:title" content="AI Bootcamp Pricing — MakerSquare Austin | $5,999">
+<meta property="og:description" content="$5,999 flat fee. No ISA. Payment plans available. 4-week in-person AI bootcamp in Austin, TX.">
+<meta property="og:image" content="https://www.makersquare.ai/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── Pricing-specific ── */
+.pricing-hero-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: var(--s5); margin-top: var(--s9); }
+
+.included-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s5); margin-top: var(--s9); }
+.included-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s6); transition: all 0.3s ease; }
+.included-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.included-icon { width: 40px; height: 40px; border-radius: var(--r-md); background: var(--cloud); display: flex; align-items: center; justify-content: center; font-size: 1rem; margin-bottom: var(--s3); }
+.included-card h3 { font-size: 1rem; margin-bottom: var(--s1); }
+.included-card p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+
+.payment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s5); margin-top: var(--s8); }
+.payment-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s7); text-align: center; transition: all 0.3s ease; }
+.payment-card:hover { box-shadow: var(--shadow-md); border-color: var(--ice); }
+.payment-card--recommended { border-color: var(--indigo); position: relative; }
+.payment-rec-badge { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); background: var(--indigo); border-radius: var(--r-full); padding: 4px 14px; white-space: nowrap; }
+.payment-price { font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--navy); margin: var(--s3) 0 var(--s1); }
+.payment-detail { font-size: 0.85rem; color: var(--text-secondary); }
+.payment-note { font-size: 0.75rem; color: var(--text-muted); margin-top: var(--s3); }
+
+.alumni-section { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s8); align-items: center; margin-top: var(--s9); }
+.alumni-price { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--indigo); margin: var(--s2) 0; }
+.alumni-features { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.alumni-features li { font-size: 0.88rem; color: var(--text-secondary); display: flex; align-items: flex-start; gap: 8px; }
+.alumni-features li::before { content: '\2713'; color: var(--green); font-weight: 700; font-size: 0.75rem; margin-top: 2px; flex-shrink: 0; }
+
+.not-included { margin-top: var(--s6); padding-top: var(--s6); border-top: 1px solid rgba(24,24,73,0.06); }
+.not-included-title { font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; color: var(--text-muted); margin-bottom: var(--s3); }
+.not-included-item { font-size: 0.82rem; color: var(--text-muted); margin-bottom: var(--s2); padding-left: 16px; position: relative; }
+.not-included-item::before { content: '—'; position: absolute; left: 0; }
+
+.page-cta { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s10); text-align: center; margin-top: var(--s10); }
+.page-cta h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: var(--s3); }
+.page-cta p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: var(--s6); max-width: 480px; margin-left: auto; margin-right: auto; }
+
+@media (max-width: 1024px) {
+  .pricing-hero-grid { grid-template-columns: 1fr; }
+  .included-grid { grid-template-columns: 1fr 1fr; }
+  .alumni-section { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .included-grid { grid-template-columns: 1fr; }
+  .payment-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maker<span>Square</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#how-it-works">How it works</a></li>
+      <li><a href="index.html#who">Who it's for</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="pricing.html" style="color:var(--navy);">Pricing</a></li>
+      <li><a href="housing.html">Housing</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="apply.html">Apply</a></li>
+    </ul>
+    <a href="apply.html" class="btn btn-primary btn-arrow">Apply Now </a>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="index.html#how-it-works">How it works</a></li>
+    <li><a href="index.html#who">Who it's for</a></li>
+    <li><a href="curriculum.html">Curriculum</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="housing.html">Housing</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="apply.html">Apply</a></li>
+  </ul>
+  <a href="apply.html" class="btn btn-primary btn-block btn-lg" style="margin-top:24px;">Apply Now</a>
+</div>
+
+
+<!-- HERO -->
+<section class="section" style="padding-top:calc(var(--nav-height) + var(--s10));padding-bottom:var(--s9);">
+  <div class="container">
+    <div class="section-label reveal">Pricing</div>
+    <h1 class="reveal" style="font-size:clamp(2rem,4vw,3rem);">Straightforward pricing.<br><span class="text-gradient">Everything included.</span></h1>
+    <p class="section-sub reveal">No ISA. No income-share. No hidden fees. Flat fee, payment plans available.</p>
+  </div>
+</section>
+
+
+<!-- PRICING CARDS -->
+<section class="section section--alt" style="padding-top:var(--s10);">
+  <div class="container">
+    <div class="section-label reveal">Choose your program</div>
+    <h2 class="reveal">One program. <span class="text-accent">Two formats.</span></h2>
+
+    <div class="pricing-hero-grid">
+      <!-- Standard -->
+      <div class="pricing-card pricing-card--featured reveal reveal-d1">
+        <div class="pricing-badge">Applications Open</div>
+        <div class="pricing-tier">In-Person &middot; Austin, TX &middot; Starting July 2026</div>
+        <div class="pricing-price">$5,999</div>
+        <div class="pricing-sub">15 seats per cohort &middot; Payment plans available &middot; No ISA</div>
+        <ul class="pricing-features">
+          <li>4 weeks in-person, Mon/Wed/Fri 9am-3pm</li>
+          <li>24-hour async instructor support</li>
+          <li>3 deployed AI products including a working AI agent</li>
+          <li>Demo Day presentation to Austin investors</li>
+          <li>Guest speakers and industry mentors</li>
+          <li>Lifetime alumni network</li>
+          <li>Pre-work curriculum (self-paced)</li>
+        </ul>
+        <div class="not-included">
+          <div class="not-included-title">Not included in tuition</div>
+          <div class="not-included-item">API costs (~$20-50 total for Claude, OpenAI embeddings)</div>
+          <div class="not-included-item">Housing (<a href="housing.html" style="color:var(--indigo);">partner discounts available</a>)</div>
+        </div>
+      </div>
+      <!-- Corporate -->
+      <div class="pricing-card reveal reveal-d2">
+        <div class="pricing-tier">Corporate Cohort &middot; Custom</div>
+        <div class="pricing-price pricing-price--dim">Custom</div>
+        <div class="pricing-sub">Private cohorts for teams (8-20 people)</div>
+        <ul class="pricing-features">
+          <li>Custom curriculum for your industry</li>
+          <li>Dedicated instructor</li>
+          <li>On-site or Austin-based</li>
+          <li>Flexible scheduling</li>
+          <li>Internal Demo Day option</li>
+          <li>Volume pricing available</li>
+        </ul>
+        <a href="corporate.html" class="btn btn-ghost btn-block btn-lg" style="margin-top:var(--s6);">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHAT'S INCLUDED -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">What's included</div>
+      <h2 class="reveal">Everything covered in the<br><span class="text-accent">$5,999 tuition.</span></h2>
+    </div>
+
+    <div class="included-grid">
+      <div class="included-card reveal reveal-d1">
+        <div class="included-icon">&#128218;</div>
+        <h3>4 Weeks In-Person</h3>
+        <p>12 sessions, max 15 builders. Mon/Wed/Fri, 9am-3pm in Austin. No filler days.</p>
+      </div>
+      <div class="included-card reveal reveal-d2">
+        <div class="included-icon">&#128172;</div>
+        <h3>24-Hour Async Support</h3>
+        <p>Questions at midnight? You'll hear back before morning. The team is always reachable.</p>
+      </div>
+      <div class="included-card reveal reveal-d3">
+        <div class="included-icon">&#128640;</div>
+        <h3>3 Deployed Products</h3>
+        <p>Three live AI tools at real URLs. Not exercises. Real things you can show, sell, or use.</p>
+      </div>
+      <div class="included-card reveal reveal-d4">
+        <div class="included-icon">&#127908;</div>
+        <h3>Demo Day</h3>
+        <p>Present your capstone on stage to Austin investors, operators, and Cohort 2 prospects.</p>
+      </div>
+      <div class="included-card reveal reveal-d5">
+        <div class="included-icon">&#129309;</div>
+        <h3>Mentors &amp; Speakers</h3>
+        <p>Guest speakers from Austin's tech scene. Industry mentors matched to your domain.</p>
+      </div>
+      <div class="included-card reveal reveal-d6">
+        <div class="included-icon">&#127760;</div>
+        <h3>Alumni Network for Life</h3>
+        <p>Permanent access to the MakerSquare community. Jobs, referrals, and collaborations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PAYMENT PLANS -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Payment options</div>
+      <h2 class="reveal">Pay the way that <span class="text-accent">works for you.</span></h2>
+    </div>
+
+    <div class="payment-grid">
+      <div class="payment-card payment-card--recommended reveal reveal-d1">
+        <div class="payment-rec-badge">Save $200</div>
+        <h3>Pay in full</h3>
+        <div class="payment-price">$5,999</div>
+        <div class="payment-detail">One payment before program starts</div>
+        <div class="payment-note">$1,000 deposit locks your seat. Remaining $4,999 due by Jun 22.</div>
+      </div>
+      <div class="payment-card reveal reveal-d2">
+        <h3>2 Payments</h3>
+        <div class="payment-price">$6,199</div>
+        <div class="payment-detail">$3,100 &times; 2 payments</div>
+        <div class="payment-note">$200 split fee. No interest. First payment at enrollment, second at Week 2.</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:var(--s7);">
+      <p style="font-size:0.88rem;color:var(--text-secondary);">
+        <span class="bl">Employer paying?</span> We issue invoices and provide a proposal letter.
+        &nbsp;&middot;&nbsp;
+        <a href="scholarship.html" style="color:var(--indigo);font-weight:600;">$1,500 scholarship</a> for veterans, first responders &amp; educators.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ALUMNI SUBSCRIPTION -->
+<section class="section">
+  <div class="container">
+    <div class="alumni-section">
+      <div>
+        <div class="section-label reveal">After graduation</div>
+        <h2 class="reveal">The alumni subscription.<br><span class="text-accent">Optional. Worth it.</span></h2>
+        <div class="alumni-price reveal">$199<span style="font-size:1rem;font-weight:500;color:var(--text-muted);">/month</span></div>
+        <p class="reveal" style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:var(--s3);">Cancel anytime. First month free after graduation.</p>
+      </div>
+      <div class="reveal">
+        <ul class="alumni-features">
+          <li>Updated curriculum as AI tools evolve</li>
+          <li>Monthly live sessions with new techniques</li>
+          <li>Private alumni community (Slack/Discord)</li>
+          <li>Job board and hiring partner access</li>
+          <li>Peer review and project feedback</li>
+          <li>Demo Day guest access for future cohorts</li>
+          <li>Discounts on future MakerSquare programs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Pricing questions</div>
+      <h2 class="reveal">Questions <span class="text-accent">answered.</span></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-question">Is there an income share agreement (ISA)?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">No. MakerSquare uses a flat-fee model. You pay tuition, you own everything you build. No percentage of future income, no hidden obligations.</div></div></div>
+
+      <div class="faq-item reveal"><button class="faq-question">What's the enrollment deposit?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">$1,000 deposit locks your seat and is applied toward your tuition. Remaining balance is due by June 22 for the July cohort.</div></div></div>
+
+      <div class="faq-item reveal"><button class="faq-question">Are there costs beyond the $5,999?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">API costs during the program run $20-50 total (Claude, OpenAI embeddings, etc.). You pay these directly to the providers. Housing is separate if you're coming from out of town.</div></div></div>
+
+      <div class="faq-item reveal"><button class="faq-question">Is tuition tax-deductible?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">MakerSquare is a professional training program, not a degree-granting institution. Many alumni deduct tuition as a business education expense. Consult your tax professional.</div></div></div>
+
+      <div class="faq-item reveal"><button class="faq-question">What's the refund policy?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Full refund (minus $1,000 deposit) up to 14 days before program start. 50% refund up to Day 1. No refund after the program begins.</div></div></div>
+
+      <div class="faq-item reveal"><button class="faq-question">Can my employer pay?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. We issue invoices and can provide a proposal letter for your employer's L&amp;D or professional development budget.</div></div></div>
+
+      <div class="faq-item reveal"><button class="faq-question">Are there scholarships?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">A $1,500 service scholarship is available for military veterans, first responders, and educators, bringing tuition to $4,499. <a href="scholarship.html" style="color:var(--indigo);font-weight:600;">Learn more.</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="page-cta reveal">
+      <h3>Starts July 2026. <span class="text-accent">15 seats.</span></h3>
+      <p>Applications are open now. $1,000 deposit locks your seat.</p>
+
+      <!-- FORM PLACEHOLDER -->
+      <div style="border:2px dashed rgba(24,24,73,0.1);border-radius:var(--r-lg);padding:var(--s8) var(--s6);margin:var(--s6) auto 0;max-width:480px;">
+        <p style="margin:0;font-weight:600;color:var(--navy);font-family:var(--font-display);">Zoho Form Embed</p>
+        <p style="margin:8px 0 0;font-size:0.82rem;color:var(--text-muted);">Replace this div with your Zoho form embed code</p>
+      </div>
+
+      <p style="margin-top:var(--s5);font-size:0.88rem;color:var(--text-secondary);">Questions? <a href="mailto:hello@makersquare.ai" style="color:var(--indigo);font-weight:600;">hello@makersquare.ai</a></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <a href="index.html" class="footer-logo">Maker<span>Square</span></a>
+    <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    <div class="footer-copy">&copy; 2026 MakerSquare LLC. Austin, TX.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="text/javascript" src="https://forms.zoho.com/js/zf_gclid.js"> </script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq885ea214ffc25f4f452068cc9bc1cec4353b0ff61817b77233444928d383fe96" defer></script>
+</body>
+</html>
