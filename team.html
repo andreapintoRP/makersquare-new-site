@@ -29,6 +29,7 @@
 .hiring-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s5); margin-top: var(--s8); }
 .hiring-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s6); transition: all 0.3s ease; }
 .hiring-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.hiring-card--open { border-style: dashed; background: var(--light-bg); }
 .hiring-card-top { display: flex; align-items: center; gap: var(--s3); margin-bottom: var(--s3); }
 .hiring-card-icon { width: 40px; height: 40px; border-radius: var(--r-md); background: var(--cloud); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
 .hiring-card-role { font-size: 0.72rem; color: var(--text-muted); }
@@ -115,8 +116,7 @@
 
     <div class="founder-card">
       <div class="founder-photo reveal">
-        <!-- Replace with Marliis' real headshot -->
-        <div style="width:100%;height:100%;background:linear-gradient(135deg, var(--cloud) 0%, var(--ice) 100%);display:flex;align-items:center;justify-content:center;font-size:0.82rem;color:var(--text-muted);">Photo placeholder</div>
+        <img src="marliis-headshot.jpg" alt="Marliis Schneider, Founder and CEO of MakerSquare" loading="lazy">
       </div>
       <div>
         <div class="founder-role reveal">Founder &amp; CEO</div>
@@ -145,7 +145,7 @@
     <h2 class="reveal">Growing the team for <span class="text-accent">Cohort 1.</span></h2>
 
     <div class="hiring-grid">
-      <div class="hiring-card reveal reveal-d1">
+      <div class="hiring-card hiring-card--open reveal reveal-d1">
         <div class="hiring-card-top">
           <div class="hiring-card-icon">&#128218;</div>
           <div><div class="hiring-card-name">Lead Instructor</div><div class="hiring-card-role">Austin Lead</div></div>
@@ -161,7 +161,7 @@
         <p>Community building, content creation, student communications. Runs MakerSquare's social presence and helps coordinate the Austin alumni network.</p>
         <div class="hiring-status hiring-status--confirmed">Starting April 2026</div>
       </div>
-      <div class="hiring-card reveal reveal-d3">
+      <div class="hiring-card hiring-card--open reveal reveal-d3">
         <div class="hiring-card-top">
           <div class="hiring-card-icon">&#9881;</div>
           <div><div class="hiring-card-name">Program Manager</div><div class="hiring-card-role">Operations</div></div>
@@ -169,7 +169,7 @@
         <p>Student logistics, enrollment, housing coordination, day-to-day program operations. Keeps cohort experience running smoothly so instructors can focus on teaching.</p>
         <div class="hiring-status hiring-status--open">Starting June 2026</div>
       </div>
-      <div class="hiring-card reveal reveal-d4">
+      <div class="hiring-card hiring-card--open reveal reveal-d4">
         <div class="hiring-card-top">
           <div class="hiring-card-icon">&#127891;</div>
           <div><div class="hiring-card-name">Head of Admissions</div><div class="hiring-card-role">Student pipeline</div></div>
@@ -192,20 +192,15 @@
     <div class="advisor-grid">
       <div class="advisor-card reveal reveal-d1">
         <div class="advisor-photo">
-          <!-- Replace with Ravi's real photo -->
-          <div style="width:100%;height:100%;background:var(--ice);display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:var(--text-muted);">RP</div>
+          <img src="ravi-parikh.jpg" alt="Ravi Parikh" loading="lazy">
         </div>
         <div class="advisor-name">Ravi Parikh</div>
         <div class="advisor-title">Co-founder &amp; CEO, Heap</div>
         <div class="advisor-desc">Ravi co-founded Heap, the product analytics platform used by thousands of companies. A YC alum, he brings deep product intuition and startup ecosystem perspective.</div>
       </div>
-      <div class="advisor-card advisor-card--placeholder reveal reveal-d2">
-        <p>Advisor &middot; Austin tech community<br><span style="color:var(--indigo);font-weight:600;">Announcing soon</span></p>
-      </div>
-      <div class="advisor-card advisor-card--placeholder reveal reveal-d3">
-        <p>Advisor &middot; Austin investor<br><span style="color:var(--indigo);font-weight:600;">Announcing soon</span></p>
-      </div>
     </div>
+
+    <p class="reveal" style="font-size:0.88rem;color:var(--text-muted);margin-top:var(--s6);">Additional advisors from Austin's operator, investor, and AI community are being assembled and will be announced before Cohort 1. <a href="mailto:hello@makersquare.ai" style="color:var(--indigo);font-weight:600;">Interested in advising? Reach out.</a></p>
   </div>
 </section>
 
