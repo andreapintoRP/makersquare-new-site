@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Bootcamp Scholarship — Military, First Responders & Teachers | MakerSquare</title>
+<meta name="description" content="MakerSquare offers a $1,500 tuition discount for military veterans, first responders, and educators. Tuition drops from $5,999 to $4,499. Austin, TX.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.makersquare.ai/scholarship.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.makersquare.ai/scholarship.html">
+<meta property="og:title" content="AI Bootcamp Scholarship — MakerSquare Austin">
+<meta property="og:description" content="$1,500 tuition discount for military, first responders, and educators. $5,999 drops to $4,499. No separate application.">
+<meta property="og:image" content="https://www.makersquare.ai/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── Scholarship-specific ── */
+.discount-hero { display: grid; grid-template-columns: 1fr auto; gap: var(--s8); align-items: center; margin-top: var(--s9); }
+.discount-badge { background: var(--navy); border-radius: var(--r-2xl); padding: var(--s8); text-align: center; min-width: 220px; }
+.discount-amount { font-family: var(--font-display); font-size: 3rem; font-weight: 800; color: var(--white); }
+.discount-label { font-size: 0.82rem; color: var(--sky); margin-top: var(--s1); }
+.discount-result { margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid rgba(255,255,255,0.1); }
+.discount-from { font-size: 0.78rem; color: rgba(255,255,255,0.4); text-decoration: line-through; }
+.discount-to { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--green); margin-top: 2px; }
+
+.qualify-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s5); margin-top: var(--s8); }
+.qualify-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s7); text-align: center; transition: all 0.3s ease; }
+.qualify-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.qualify-icon { font-size: 2rem; margin-bottom: var(--s3); }
+.qualify-card h3 { font-size: 1.1rem; margin-bottom: var(--s2); }
+.qualify-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--s3); }
+.qualify-examples { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+
+.how-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s5); margin-top: var(--s8); }
+.how-step { text-align: center; }
+.how-step-num { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--white); background: var(--indigo); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--s3); }
+.how-step h3 { font-size: 0.95rem; margin-bottom: var(--s2); }
+.how-step p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+
+.included-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s6); margin-top: var(--s8); }
+.included-col h3 { font-family: var(--font-display); font-size: 0.92rem; font-weight: 700; color: var(--navy); margin-bottom: var(--s4); }
+.included-item { display: flex; align-items: flex-start; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--s3); line-height: 1.5; }
+.included-item::before { content: '\2713'; color: var(--green); font-weight: 700; font-size: 0.75rem; margin-top: 2px; flex-shrink: 0; }
+.not-included-item { display: flex; align-items: flex-start; gap: 8px; font-size: 0.85rem; color: var(--text-muted); margin-bottom: var(--s3); line-height: 1.5; }
+.not-included-item::before { content: '\2014'; flex-shrink: 0; }
+
+.page-cta { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s10); text-align: center; margin-top: var(--s10); }
+.page-cta h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: var(--s3); }
+.page-cta p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: var(--s6); max-width: 480px; margin-left: auto; margin-right: auto; }
+
+@media (max-width: 1024px) { .discount-hero { grid-template-columns: 1fr; } .qualify-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .how-steps { grid-template-columns: 1fr; } .included-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maker<span>Square</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#how-it-works">How it works</a></li>
+      <li><a href="index.html#who">Who it's for</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="housing.html">Housing</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="apply.html">Apply</a></li>
+    </ul>
+    <a href="apply.html" class="btn btn-primary btn-arrow">Apply Now </a>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="index.html#how-it-works">How it works</a></li>
+    <li><a href="index.html#who">Who it's for</a></li>
+    <li><a href="curriculum.html">Curriculum</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="housing.html">Housing</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="apply.html">Apply</a></li>
+  </ul>
+  <a href="apply.html" class="btn btn-primary btn-block btn-lg" style="margin-top:24px;">Apply Now</a>
+</div>
+
+
+<!-- HERO -->
+<section class="section" style="padding-top:calc(var(--nav-height) + var(--s10));padding-bottom:var(--s9);">
+  <div class="container">
+    <div class="section-label reveal">Service Scholarship</div>
+    <h1 class="reveal" style="font-size:clamp(2rem,4vw,3rem);">You've served your community.<br><span class="text-gradient">We want to invest in yours.</span></h1>
+    <p class="section-sub reveal" style="max-width:640px;">$1,500 tuition discount for active military, veterans, first responders, and educators. If you've spent your career serving others, AI skills can multiply the impact you have.</p>
+  </div>
+</section>
+
+
+<!-- DISCOUNT HIGHLIGHT -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="discount-hero">
+      <div>
+        <div class="section-label reveal">The discount</div>
+        <h2 class="reveal">$1,500 off tuition. <span class="text-accent">No strings attached.</span></h2>
+        <p class="reveal" style="color:var(--text-secondary);margin-top:var(--s3);line-height:1.75;max-width:520px;">Straightforward discount applied at enrollment. No separate application process beyond verifying your eligibility. Submit the form below, we verify, the discount is applied before your first payment.</p>
+      </div>
+      <div class="discount-badge reveal">
+        <div class="discount-amount">$1,500</div>
+        <div class="discount-label">service scholarship</div>
+        <div class="discount-result">
+          <div class="discount-from">$5,999 standard tuition</div>
+          <div class="discount-to">$4,499</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHO QUALIFIES -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Eligibility</div>
+      <h2 class="reveal">Who <span class="text-accent">qualifies.</span></h2>
+    </div>
+
+    <div class="qualify-grid">
+      <div class="qualify-card reveal reveal-d1">
+        <div class="qualify-icon">&#127894;</div>
+        <h3>Military</h3>
+        <p>Active duty service members, veterans, and reservists across all branches of the U.S. armed forces.</p>
+        <div class="qualify-examples">Army &middot; Navy &middot; Air Force &middot; Marines &middot; Coast Guard &middot; Space Force &middot; National Guard &middot; Reserves</div>
+      </div>
+      <div class="qualify-card reveal reveal-d2">
+        <div class="qualify-icon">&#128658;</div>
+        <h3>First Responders</h3>
+        <p>Police officers, firefighters, paramedics, EMTs, and other emergency services personnel. Active or retired.</p>
+        <div class="qualify-examples">Law enforcement &middot; Fire service &middot; EMS / paramedics &middot; Emergency dispatch &middot; Search and rescue</div>
+      </div>
+      <div class="qualify-card reveal reveal-d3">
+        <div class="qualify-icon">&#127891;</div>
+        <h3>Educators</h3>
+        <p>Current or former K-12 teachers, school administrators, university faculty, and other education professionals.</p>
+        <div class="qualify-examples">K-12 teachers &middot; School administrators &middot; College faculty &middot; Instructional coordinators &middot; School counselors</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- HOW TO CLAIM -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Process</div>
+      <h2 class="reveal">How to claim <span class="text-accent">your discount.</span></h2>
+    </div>
+
+    <div class="how-steps">
+      <div class="how-step reveal reveal-d1">
+        <div class="how-step-num">01</div>
+        <h3>Submit this form</h3>
+        <p>Tell us about your service background and what you want to build. Takes about 5 minutes.</p>
+      </div>
+      <div class="how-step reveal reveal-d2">
+        <div class="how-step-num">02</div>
+        <h3>We verify eligibility</h3>
+        <p>Simple proof of service: military ID, badge, teaching license, or equivalent. Quick and respectful.</p>
+      </div>
+      <div class="how-step reveal reveal-d3">
+        <div class="how-step-num">03</div>
+        <h3>Discount applied at enrollment</h3>
+        <p>$1,500 applied to your tuition before your first payment. Then complete the standard application.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHAT'S COVERED -->
+<section class="section">
+  <div class="container">
+    <div class="included-grid">
+      <div class="reveal">
+        <h3>What the scholarship covers</h3>
+        <div class="included-item">$1,500 off the $5,999 standard tuition, bringing it to $4,499</div>
+        <div class="included-item">Available on all payment plan options (discount applies to the total)</div>
+        <div class="included-item">Stackable with employer reimbursement</div>
+        <div class="included-item">Full access to everything in the standard program</div>
+      </div>
+      <div class="reveal">
+        <h3 style="color:var(--text-muted);">What it doesn't cover</h3>
+        <div class="not-included-item">API costs during the program (~$20-50, paid separately)</div>
+        <div class="not-included-item">Housing (see our <a href="housing.html" style="color:var(--indigo);">housing page</a> for partner options)</div>
+        <div class="not-included-item">Cannot be combined with other MakerSquare discount codes</div>
+        <div class="not-included-item">Subject to seat availability in the cohort</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FORM -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="max-width:600px;margin:0 auto;text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Apply for the discount</div>
+      <h2 class="reveal">Tell us about <span class="text-accent">your service.</span></h2>
+      <p class="reveal" style="font-size:0.9rem;color:var(--text-secondary);margin-top:var(--s2);margin-bottom:var(--s6);">This form is for the scholarship only. After we verify eligibility, you complete the standard MakerSquare application. Both can run at the same time.</p>
+
+      <!-- FORM PLACEHOLDER -->
+      <div class="reveal" style="border:2px dashed rgba(24,24,73,0.1);border-radius:var(--r-lg);padding:var(--s10) var(--s6);">
+        <p style="margin:0;font-weight:600;color:var(--navy);font-family:var(--font-display);">Zoho Scholarship Form</p>
+        <p style="margin:8px 0 0;font-size:0.82rem;color:var(--text-muted);">Replace this div with your Zoho form embed code</p>
+      </div>
+
+      <p style="margin-top:var(--s5);font-size:0.88rem;color:var(--text-secondary);">Questions? <a href="mailto:hello@makersquare.ai" style="color:var(--indigo);font-weight:600;">hello@makersquare.ai</a></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Scholarship FAQ</div>
+      <h2 class="reveal">Common <span class="text-accent">questions.</span></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-question">Can I apply for the scholarship and the program at the same time?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. Submit the scholarship form and the program application simultaneously. We verify eligibility in parallel.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">I'm retired. Do I still qualify?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. The scholarship applies to both active and retired service members, first responders, and educators.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">I'm not sure if I qualify. Should I still apply?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. Submit the form anyway. We'd rather err on the side of including people. We'll let you know within 2 business days.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Does the discount work with payment plans?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. The $1,500 discount is applied to your total tuition ($4,499), then you can split that across payments.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Can my employer also pay?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. The scholarship is stackable with employer reimbursement. Your employer covers the discounted tuition, not the original amount.</div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="page-cta reveal">
+      <h3>Apply for the discount. <span class="text-accent">Then apply to the program.</span></h3>
+      <p>We confirm eligibility within 2 business days.</p>
+      <div style="display:flex;gap:var(--s3);justify-content:center;flex-wrap:wrap;">
+        <a href="#" onclick="document.querySelector('.section--alt .section-label').scrollIntoView({behavior:'smooth'});return false;" class="btn btn-primary btn-lg btn-arrow">Apply for scholarship </a>
+        <a href="apply.html" class="btn btn-ghost btn-lg btn-arrow">Apply to the program </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <a href="index.html" class="footer-logo">Maker<span>Square</span></a>
+    <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    <div class="footer-copy">&copy; 2026 MakerSquare LLC. Austin, TX.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="text/javascript" src="https://forms.zoho.com/js/zf_gclid.js"> </script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq885ea214ffc25f4f452068cc9bc1cec4353b0ff61817b77233444928d383fe96" defer></script>
+</body>
+</html>
