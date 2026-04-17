@@ -14,8 +14,10 @@
 <meta property="og:description" content="Meet the team behind MakerSquare. Founder Marliis Schneider, advisory board, and the mentors shaping Austin's AI builder community.">
 <meta property="og:image" content="https://www.makersquare.ai/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.min.css">
 <style>
 /* ── Team-specific ── */
 .founder-card { display: grid; grid-template-columns: 280px 1fr; gap: var(--s8); align-items: start; margin-top: var(--s9); }
@@ -79,6 +81,9 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.makersquare.ai/"},{"@type":"ListItem","position":2,"name":"Team","item":"https://www.makersquare.ai/team"}]}
+</script>
 </head>
 <body>
 
@@ -115,9 +120,16 @@
   <a href="apply.html" class="btn btn-primary btn-block btn-lg" style="margin-top:24px;">Apply Now</a>
 </div>
 
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="index.html">Home</a></li>
+    <li class="sep">/</li>
+    <li class="current">Team</li>
+  </ol>
+</nav>
 
 <!-- HERO -->
-<section class="section" style="padding-top:calc(var(--nav-height) + var(--s10));padding-bottom:var(--s9);">
+<section class="section" style="padding-top:var(--s8);padding-bottom:var(--s9);">
   <div class="container">
     <div class="page-hero-grid">
       <div>
@@ -130,13 +142,13 @@
           <div style="display:flex;flex-direction:column;gap:12px;">
             <!-- Person 1 - founder -->
             <div style="display:flex;align-items:center;gap:12px;padding:10px;background:var(--white);border-radius:var(--r-md);border:1px solid rgba(24,24,73,0.06);">
-              <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--indigo);"><img src="marliis-headshot.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+              <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--indigo);"><img loading="lazy" src="marliis-headshot.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
               <div><div style="height:5px;background:var(--navy);opacity:0.2;border-radius:3px;width:90px;margin-bottom:4px;"></div><div style="height:4px;background:var(--cloud);border-radius:2px;width:60px;"></div></div>
               <div style="margin-left:auto;font-size:0.6rem;font-weight:700;color:var(--indigo);background:rgba(64,61,216,0.06);border-radius:var(--r-full);padding:2px 8px;">Founder</div>
             </div>
             <!-- Person 2 - advisor -->
             <div style="display:flex;align-items:center;gap:12px;padding:10px;background:var(--white);border-radius:var(--r-md);border:1px solid rgba(24,24,73,0.06);">
-              <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--sky);"><img src="ravi-parikh.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+              <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--sky);"><img loading="lazy" src="ravi-parikh.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
               <div><div style="height:5px;background:var(--navy);opacity:0.2;border-radius:3px;width:80px;margin-bottom:4px;"></div><div style="height:4px;background:var(--cloud);border-radius:2px;width:50px;"></div></div>
               <div style="margin-left:auto;font-size:0.6rem;font-weight:700;color:var(--sky);background:rgba(129,170,251,0.1);border-radius:var(--r-full);padding:2px 8px;">Advisor</div>
             </div>
@@ -345,7 +357,7 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.min.js"></script>
 <script type="text/javascript" src="https://forms.zoho.com/js/zf_gclid.js"> </script>
 <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq885ea214ffc25f4f452068cc9bc1cec4353b0ff61817b77233444928d383fe96" defer></script>
 </body>

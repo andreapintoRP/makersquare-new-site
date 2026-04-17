@@ -14,8 +14,10 @@
 <meta property="og:description" content="$5,999 flat fee. No ISA. Payment plans available. 4-week in-person AI bootcamp in Austin, TX.">
 <meta property="og:image" content="https://www.makersquare.ai/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.min.css">
 <style>
 /* ── Pricing-specific ── */
 .pricing-hero-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: var(--s5); margin-top: var(--s9); }
@@ -92,6 +94,9 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.makersquare.ai/"},{"@type":"ListItem","position":2,"name":"Pricing","item":"https://www.makersquare.ai/pricing"}]}
+</script>
 </head>
 <body>
 
@@ -128,9 +133,16 @@
   <a href="apply.html" class="btn btn-primary btn-block btn-lg" style="margin-top:24px;">Apply Now</a>
 </div>
 
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="index.html">Home</a></li>
+    <li class="sep">/</li>
+    <li class="current">Pricing</li>
+  </ol>
+</nav>
 
 <!-- HERO -->
-<section class="section" style="padding-top:calc(var(--nav-height) + var(--s10));padding-bottom:var(--s9);">
+<section class="section" style="padding-top:var(--s8);padding-bottom:var(--s9);">
   <div class="container">
     <div class="page-hero-grid">
       <div>
@@ -435,7 +447,7 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.min.js"></script>
 <script type="text/javascript" src="https://forms.zoho.com/js/zf_gclid.js"> </script>
 <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq885ea214ffc25f4f452068cc9bc1cec4353b0ff61817b77233444928d383fe96" defer></script>
 </body>
