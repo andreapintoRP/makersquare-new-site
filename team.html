@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team — MakerSquare AI Bootcamp Austin</title>
+<meta name="description" content="Meet the team behind MakerSquare, Austin's AI bootcamp for non-technical professionals. Founder Marliis Schneider, advisory board, instructors, and mentors.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.makersquare.ai/team.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.makersquare.ai/team.html">
+<meta property="og:title" content="Our Team — MakerSquare AI Bootcamp Austin">
+<meta property="og:description" content="Meet the team behind MakerSquare. Founder Marliis Schneider, advisory board, and the mentors shaping Austin's AI builder community.">
+<meta property="og:image" content="https://www.makersquare.ai/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── Team-specific ── */
+.founder-card { display: grid; grid-template-columns: 280px 1fr; gap: var(--s8); align-items: start; margin-top: var(--s9); }
+.founder-photo { border-radius: var(--r-2xl); overflow: hidden; aspect-ratio: 3/4; background: linear-gradient(135deg, var(--cloud) 0%, var(--ice) 100%); }
+.founder-photo img { width: 100%; height: 100%; object-fit: cover; }
+.founder-role { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--indigo); margin-bottom: var(--s2); }
+.founder-name { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--navy); margin-bottom: var(--s4); }
+.founder-bio p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: var(--s3); }
+.founder-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--s4); }
+.founder-tag { font-size: 0.72rem; font-weight: 600; color: var(--text-secondary); background: var(--cloud); border-radius: var(--r-full); padding: 4px 12px; }
+
+.hiring-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s5); margin-top: var(--s8); }
+.hiring-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s6); transition: all 0.3s ease; }
+.hiring-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.hiring-card-top { display: flex; align-items: center; gap: var(--s3); margin-bottom: var(--s3); }
+.hiring-card-icon { width: 40px; height: 40px; border-radius: var(--r-md); background: var(--cloud); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+.hiring-card-role { font-size: 0.72rem; color: var(--text-muted); }
+.hiring-card-name { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--navy); }
+.hiring-card p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+.hiring-status { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-radius: var(--r-full); padding: 3px 10px; margin-top: var(--s3); }
+.hiring-status--open { background: rgba(64,61,216,0.08); color: var(--indigo); border: 1px solid rgba(64,61,216,0.15); }
+.hiring-status--confirmed { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+
+.advisor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s5); margin-top: var(--s8); }
+.advisor-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s6); transition: all 0.3s ease; }
+.advisor-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.advisor-photo { width: 56px; height: 56px; border-radius: 50%; overflow: hidden; margin-bottom: var(--s3); background: var(--cloud); }
+.advisor-photo img { width: 100%; height: 100%; object-fit: cover; }
+.advisor-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--navy); }
+.advisor-title { font-size: 0.78rem; color: var(--text-muted); margin-bottom: var(--s2); }
+.advisor-desc { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+.advisor-card--placeholder { border-style: dashed; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 180px; }
+.advisor-card--placeholder p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
+.mentor-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s5); margin-top: var(--s8); }
+.mentor-type { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s7); transition: all 0.3s ease; }
+.mentor-type:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.mentor-type-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--indigo); margin-bottom: var(--s2); }
+.mentor-type h3 { font-size: 1.05rem; margin-bottom: var(--s2); }
+.mentor-type p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+
+.page-cta { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s10); text-align: center; margin-top: var(--s10); }
+.page-cta h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: var(--s3); }
+.page-cta p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: var(--s6); max-width: 480px; margin-left: auto; margin-right: auto; }
+
+@media (max-width: 1024px) { .founder-card { grid-template-columns: 1fr; } .founder-photo { max-width: 280px; } .advisor-grid { grid-template-columns: 1fr 1fr; } .mentor-types { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .hiring-grid { grid-template-columns: 1fr; } .advisor-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maker<span>Square</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#how-it-works">How it works</a></li>
+      <li><a href="index.html#who">Who it's for</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="housing.html">Housing</a></li>
+      <li><a href="team.html" style="color:var(--navy);">Team</a></li>
+      <li><a href="apply.html">Apply</a></li>
+    </ul>
+    <a href="apply.html" class="btn btn-primary btn-arrow">Apply Now </a>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="index.html#how-it-works">How it works</a></li>
+    <li><a href="index.html#who">Who it's for</a></li>
+    <li><a href="curriculum.html">Curriculum</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="housing.html">Housing</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="apply.html">Apply</a></li>
+  </ul>
+  <a href="apply.html" class="btn btn-primary btn-block btn-lg" style="margin-top:24px;">Apply Now</a>
+</div>
+
+
+<!-- HERO -->
+<section class="section" style="padding-top:calc(var(--nav-height) + var(--s10));padding-bottom:var(--s9);">
+  <div class="container">
+    <div class="section-label reveal">Team</div>
+    <h1 class="reveal" style="font-size:clamp(2rem,4vw,3rem);">Built by operators,<br><span class="text-gradient">for operators.</span></h1>
+    <p class="section-sub reveal">MakerSquare is run by people who have built things in the real world. Not academics. Not theoretical AI researchers.</p>
+  </div>
+</section>
+
+
+<!-- FOUNDER -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-label reveal">Leadership</div>
+    <h2 class="reveal">The team.</h2>
+
+    <div class="founder-card">
+      <div class="founder-photo reveal">
+        <!-- Replace with Marliis' real headshot -->
+        <div style="width:100%;height:100%;background:linear-gradient(135deg, var(--cloud) 0%, var(--ice) 100%);display:flex;align-items:center;justify-content:center;font-size:0.82rem;color:var(--text-muted);">Photo placeholder</div>
+      </div>
+      <div>
+        <div class="founder-role reveal">Founder &amp; CEO</div>
+        <div class="founder-name reveal">Marliis Schneider</div>
+        <div class="founder-bio">
+          <p class="reveal">Marliis has spent years in the operational trenches. Running teams, building systems, and watching firsthand as AI tools went from novelty to necessity in real businesses.</p>
+          <p class="reveal">She built MakerSquare because she kept meeting smart, experienced operators who desperately wanted to use AI but had nowhere to actually learn it in depth. Her background spans operations, business development, and startup ecosystems.</p>
+          <p class="reveal">Deeply embedded in Austin's tech and founder community. At MakerSquare, she sets the program vision, owns the curriculum direction, and runs the relationships that make Demo Day matter for graduates.</p>
+        </div>
+        <div class="founder-tags reveal">
+          <span class="founder-tag">Austin, TX</span>
+          <span class="founder-tag">Operations</span>
+          <span class="founder-tag">Business Development</span>
+          <span class="founder-tag">Startup Ecosystems</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- HIRING -->
+<section class="section">
+  <div class="container">
+    <div class="section-label reveal">Core team</div>
+    <h2 class="reveal">Growing the team for <span class="text-accent">Cohort 1.</span></h2>
+
+    <div class="hiring-grid">
+      <div class="hiring-card reveal reveal-d1">
+        <div class="hiring-card-top">
+          <div class="hiring-card-icon">&#128218;</div>
+          <div><div class="hiring-card-name">Lead Instructor</div><div class="hiring-card-role">Austin Lead</div></div>
+        </div>
+        <p>Runs all in-person sessions and leads Demo Day. Looking for a credible AI builder embedded in Austin's tech scene. Someone who has shipped real AI products and teaches from experience.</p>
+        <div class="hiring-status hiring-status--open">Hiring for Cohort 1</div>
+      </div>
+      <div class="hiring-card reveal reveal-d2">
+        <div class="hiring-card-top">
+          <div class="hiring-card-icon">&#128227;</div>
+          <div><div class="hiring-card-name">Senior Marketing Coordinator</div><div class="hiring-card-role">Community &amp; Content</div></div>
+        </div>
+        <p>Community building, content creation, student communications. Runs MakerSquare's social presence and helps coordinate the Austin alumni network.</p>
+        <div class="hiring-status hiring-status--confirmed">Starting April 2026</div>
+      </div>
+      <div class="hiring-card reveal reveal-d3">
+        <div class="hiring-card-top">
+          <div class="hiring-card-icon">&#9881;</div>
+          <div><div class="hiring-card-name">Program Manager</div><div class="hiring-card-role">Operations</div></div>
+        </div>
+        <p>Student logistics, enrollment, housing coordination, day-to-day program operations. Keeps cohort experience running smoothly so instructors can focus on teaching.</p>
+        <div class="hiring-status hiring-status--open">Starting June 2026</div>
+      </div>
+      <div class="hiring-card reveal reveal-d4">
+        <div class="hiring-card-top">
+          <div class="hiring-card-icon">&#127891;</div>
+          <div><div class="hiring-card-name">Head of Admissions</div><div class="hiring-card-role">Student pipeline</div></div>
+        </div>
+        <p>Application review, take-home project coordination, and admissions interviews. Maintains cohort quality and student fit as volume grows.</p>
+        <div class="hiring-status hiring-status--open">Starting September 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ADVISORY BOARD -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-label reveal">Advisory board</div>
+    <h2 class="reveal">Austin operators and tech leaders <span class="text-accent">who've been there.</span></h2>
+    <p class="section-sub reveal">They help shape curriculum, open doors for graduates, and show up at Demo Day.</p>
+
+    <div class="advisor-grid">
+      <div class="advisor-card reveal reveal-d1">
+        <div class="advisor-photo">
+          <!-- Replace with Ravi's real photo -->
+          <div style="width:100%;height:100%;background:var(--ice);display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:var(--text-muted);">RP</div>
+        </div>
+        <div class="advisor-name">Ravi Parikh</div>
+        <div class="advisor-title">Co-founder &amp; CEO, Heap</div>
+        <div class="advisor-desc">Ravi co-founded Heap, the product analytics platform used by thousands of companies. A YC alum, he brings deep product intuition and startup ecosystem perspective.</div>
+      </div>
+      <div class="advisor-card advisor-card--placeholder reveal reveal-d2">
+        <p>Advisor &middot; Austin tech community<br><span style="color:var(--indigo);font-weight:600;">Announcing soon</span></p>
+      </div>
+      <div class="advisor-card advisor-card--placeholder reveal reveal-d3">
+        <p>Advisor &middot; Austin investor<br><span style="color:var(--indigo);font-weight:600;">Announcing soon</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MENTORS & SPEAKERS -->
+<section class="section">
+  <div class="container">
+    <div class="section-label reveal">Mentors &amp; guest speakers</div>
+    <h2 class="reveal">Share your expertise. <span class="text-accent">Help builders build.</span></h2>
+    <p class="section-sub reveal">Every cohort features operators, builders, and domain experts who share what they've actually done. Not theoretical talks. Real stories.</p>
+
+    <div class="mentor-types">
+      <div class="mentor-type reveal reveal-d1">
+        <div class="mentor-type-label">Guest Speaker</div>
+        <h3>You've shipped something with AI</h3>
+        <p>One session, 60 minutes. Share what worked, what didn't, and what you know now that you wish you knew at the start. No slides required.</p>
+      </div>
+      <div class="mentor-type reveal reveal-d2">
+        <div class="mentor-type-label">Mentor</div>
+        <h3>You want to actively support builders</h3>
+        <p>Available for occasional 1:1 conversations throughout the program. About 1 hour/week, flexible scheduling. Domain expertise or technical depth.</p>
+      </div>
+      <div class="mentor-type reveal reveal-d3">
+        <div class="mentor-type-label">Demo Day Participant</div>
+        <h3>You want to meet the next wave</h3>
+        <p>Join Demo Day as a judge, investor, or hiring partner. See 10-15 real AI products built by non-technical domain experts. Ask hard questions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="page-cta reveal">
+      <h3>Want to get involved?</h3>
+      <p>We're building Austin's AI builder community. Whether you want to speak, mentor, judge Demo Day, or advise, we'd like to hear from you.</p>
+
+      <!-- FORM PLACEHOLDER -->
+      <div style="border:2px dashed rgba(24,24,73,0.1);border-radius:var(--r-lg);padding:var(--s8) var(--s6);margin:var(--s6) auto 0;max-width:480px;">
+        <p style="margin:0;font-weight:600;color:var(--navy);font-family:var(--font-display);">Zoho Mentor/Speaker Form</p>
+        <p style="margin:8px 0 0;font-size:0.82rem;color:var(--text-muted);">Replace this div with your Zoho form embed code</p>
+      </div>
+
+      <p style="margin-top:var(--s5);font-size:0.88rem;color:var(--text-secondary);">Or email us directly: <a href="mailto:hello@makersquare.ai" style="color:var(--indigo);font-weight:600;">hello@makersquare.ai</a></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <a href="index.html" class="footer-logo">Maker<span>Square</span></a>
+    <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    <div class="footer-copy">&copy; 2026 MakerSquare LLC. Austin, TX.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="text/javascript" src="https://forms.zoho.com/js/zf_gclid.js"> </script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq885ea214ffc25f4f452068cc9bc1cec4353b0ff61817b77233444928d383fe96" defer></script>
+</body>
+</html>
