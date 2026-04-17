@@ -218,7 +218,7 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; }
 .bento-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--s5); margin-top: var(--s9); }
 .bento-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s8); transition: all 0.3s ease; position: relative; overflow: hidden; }
 .bento-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--ice); }
-.bento-icon { width: 48px; height: 48px; border-radius: var(--r-md); background: var(--cloud); border: 1px solid var(--ice); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: var(--s5); transition: background 0.3s; }
+.bento-icon { width: 48px; height: 48px; border-radius: var(--r-md); background: var(--cloud); border: 1px solid var(--ice); display: flex; align-items: center; justify-content: center; color: var(--indigo); margin-bottom: var(--s5); transition: background 0.3s; }
 .bento-card:hover .bento-icon { background: rgba(64,61,216,0.1); }
 .bento-card h3 { margin-bottom: var(--s2); }
 .bento-card p { font-size: 0.925rem; color: var(--text-secondary); line-height: 1.7; }
@@ -274,7 +274,8 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; }
 .demo-content p { font-size: 1rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: var(--s3); }
 .demo-highlights { display: flex; flex-direction: column; gap: var(--s3); margin-top: var(--s5); }
 .demo-highlight { display: flex; align-items: flex-start; gap: 12px; font-size: 0.925rem; color: var(--text-secondary); }
-.demo-highlight-icon { width: 28px; height: 28px; min-width: 28px; border-radius: var(--r-sm); background: var(--cloud); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; }
+.demo-highlight-icon { width: 28px; height: 28px; min-width: 28px; border-radius: var(--r-sm); background: var(--cloud); display: flex; align-items: center; justify-content: center; color: var(--indigo); }
+.demo-highlight-icon svg { width: 14px; height: 14px; }
 
 /* ══════════════════════════════════════════════════════════════════════════════
    PRICING
