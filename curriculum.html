@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Bootcamp Curriculum — MakerSquare Austin | 4-Week Program</title>
+<meta name="description" content="MakerSquare's 4-week AI curriculum: advanced prompting, RAG systems, AI agents, voice/multimodal, and real deployment. Build 3 AI products. No coding background required.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.makersquare.ai/curriculum.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.makersquare.ai/curriculum.html">
+<meta property="og:title" content="AI Bootcamp Curriculum — MakerSquare Austin">
+<meta property="og:description" content="4-week AI curriculum: advanced prompting, RAG, AI agents, voice, and real deployment. 3 shipped products by Demo Day.">
+<meta property="og:image" content="https://www.makersquare.ai/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── Curriculum-specific styles ── */
+.prework-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s5); margin-top: var(--s8); }
+.prework-step { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s7); position: relative; transition: all 0.3s ease; }
+.prework-step:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.prework-step-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--cloud); line-height: 1; margin-bottom: var(--s3); }
+.prework-step h3 { margin-bottom: var(--s2); }
+.prework-step p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+
+.week-card { border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); overflow: hidden; margin-bottom: var(--s5); background: var(--white); transition: all 0.3s ease; }
+.week-card:hover { box-shadow: var(--shadow-md); border-color: var(--ice); }
+.week-header { display: flex; align-items: center; justify-content: space-between; padding: var(--s5) var(--s7); background: var(--light-bg); border-bottom: 1px solid rgba(24,24,73,0.06); }
+.week-label { font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--indigo); }
+.week-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; }
+.week-deliverable-badge { font-size: 0.7rem; font-weight: 600; color: var(--green); background: var(--green-bg); border: 1px solid var(--green-border); border-radius: 6px; padding: 4px 10px; white-space: nowrap; }
+.week-days { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(24,24,73,0.04); }
+.day-block { background: var(--white); padding: var(--s6); }
+.day-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: var(--s2); }
+.day-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: var(--s2); }
+.day-tools { font-size: 0.72rem; color: var(--indigo); font-weight: 600; margin-bottom: var(--s2); }
+.day-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; }
+.day-deliverable { margin-top: var(--s3); font-size: 0.8rem; font-weight: 600; color: var(--green); }
+.week-deliverable-row { padding: var(--s4) var(--s7); background: var(--green-bg); border-top: 1px solid var(--green-border); display: flex; align-items: center; gap: 10px; font-size: 0.85rem; }
+.week-deliverable-row strong { color: var(--navy); }
+.week-deliverable-row span { color: var(--green); font-weight: 600; }
+
+.product-examples { display: flex; flex-wrap: wrap; gap: var(--s2); margin-top: var(--s3); }
+.product-example { font-size: 0.75rem; color: var(--text-secondary); background: var(--cloud); border-radius: var(--r-full); padding: 4px 12px; }
+
+.tools-strip { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s6) var(--s7); margin-top: var(--s9); }
+.tools-strip-title { font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; color: var(--text-secondary); margin-bottom: var(--s3); }
+.tools-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.tool-chip { font-size: 0.78rem; font-weight: 500; color: var(--text-secondary); background: var(--light-bg); border: 1px solid rgba(24,24,73,0.06); border-radius: 6px; padding: 5px 12px; transition: all 0.2s; }
+.tool-chip:hover { border-color: var(--indigo); color: var(--indigo); background: var(--cloud); }
+
+.page-cta { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s10); text-align: center; margin-top: var(--s10); }
+.page-cta h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: var(--s3); }
+.page-cta p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: var(--s6); max-width: 480px; margin-left: auto; margin-right: auto; }
+
+@media (max-width: 900px) {
+  .week-days { grid-template-columns: 1fr; }
+  .prework-steps { grid-template-columns: 1fr; }
+  .week-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maker<span>Square</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#how-it-works">How it works</a></li>
+      <li><a href="index.html#who">Who it's for</a></li>
+      <li><a href="curriculum.html" style="color:var(--navy);">Curriculum</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="housing.html">Housing</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="apply.html">Apply</a></li>
+    </ul>
+    <a href="apply.html" class="btn btn-primary btn-arrow">Apply Now </a>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="index.html#how-it-works">How it works</a></li>
+    <li><a href="index.html#who">Who it's for</a></li>
+    <li><a href="curriculum.html">Curriculum</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="housing.html">Housing</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="apply.html">Apply</a></li>
+  </ul>
+  <a href="apply.html" class="btn btn-primary btn-block btn-lg" style="margin-top:24px;">Apply Now</a>
+</div>
+
+
+<!-- HERO -->
+<section class="section" style="padding-top:calc(var(--nav-height) + var(--s10));">
+  <div class="container">
+    <div class="section-label reveal">Full Curriculum</div>
+    <h1 class="reveal" style="font-size:clamp(2rem,4vw,3rem);">We start where courses end.</h1>
+    <p class="section-sub reveal" style="max-width:680px;">No beginner hand-holding. No visual automation tools. Production prompting, RAG, agents, evals, and real deployment. <span class="bl">This curriculum evolves with the industry.</span></p>
+  </div>
+</section>
+
+
+<!-- PRE-WORK -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-label reveal">Pre-Work</div>
+    <h2 class="reveal">Three things before Day 1.</h2>
+    <p class="section-sub reveal">Self-paced. Complete before your admissions interview. This isn't busywork. Your pre-work is reviewed by the admissions team.</p>
+
+    <div class="prework-steps">
+      <div class="prework-step reveal reveal-d1">
+        <div class="prework-step-num">01</div>
+        <h3>Tell us who you are</h3>
+        <p>Describe your role, your industry, and a real problem you've tried to solve. The more specific, the better.</p>
+      </div>
+      <div class="prework-step reveal reveal-d2">
+        <div class="prework-step-num">02</div>
+        <h3>Pick your use case</h3>
+        <p>Identify one task in your work that could be automated or improved with AI. Be specific: what goes in, what comes out, who uses it.</p>
+      </div>
+      <div class="prework-step reveal reveal-d3">
+        <div class="prework-step-num">03</div>
+        <h3>Build your first prompt system</h3>
+        <p>Write a system prompt, test it on 5 real inputs, iterate, and submit your final prompt + 3 best outputs + notes on what broke.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WEEK 1 -->
+<section class="section">
+  <div class="container">
+    <div class="section-label reveal">Week 1</div>
+    <h2 class="reveal">Advanced Foundations.<br><span class="text-accent">From user to builder.</span></h2>
+
+    <div class="week-card reveal" style="margin-top:var(--s8);">
+      <div class="week-header">
+        <div><div class="week-label">Week 1</div><div class="week-title">Advanced Prompting, APIs &amp; Your First Product</div></div>
+      </div>
+      <div class="week-days">
+        <div class="day-block">
+          <div class="day-label">Monday</div>
+          <div class="day-title">Advanced Prompting &amp; Structured Output</div>
+          <div class="day-tools">Claude &middot; ChatGPT &middot; JSON</div>
+          <div class="day-desc">System prompts, context setting, few-shot examples, structured JSON output, model selection. You'll know which model to use, when, and why.</div>
+        </div>
+        <div class="day-block">
+          <div class="day-label">Wednesday</div>
+          <div class="day-title">Building Real Integrations with Cursor</div>
+          <div class="day-tools">Cursor &middot; Claude API &middot; Hoppscotch &middot; Railway</div>
+          <div class="day-desc">APIs explained for non-engineers. AI-assisted coding with Cursor. Write real scripts, deploy a real integration. Your first taste of building, not prompting.</div>
+        </div>
+        <div class="day-block">
+          <div class="day-label">Friday</div>
+          <div class="day-title">Product 1 Sprint Day 1</div>
+          <div class="day-tools">Cursor &middot; Claude API</div>
+          <div class="day-desc">Scope Product 1 based on your use case. Full build sprint. Working skeleton deployed by end of Friday.</div>
+          <div class="day-deliverable">&#10003; Product 1 skeleton deployed and running</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WEEKS 2-3 -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-label reveal">Weeks 2-3</div>
+    <h2 class="reveal">RAG, Agents &amp; Interfaces.<br><span class="text-accent">Two products, shipped.</span></h2>
+
+    <!-- Week 2 -->
+    <div class="week-card reveal" style="margin-top:var(--s8);">
+      <div class="week-header">
+        <div><div class="week-label">Week 2</div><div class="week-title">RAG + Agents. Product 1 Ships.</div></div>
+        <div class="week-deliverable-badge">Major Deliverable</div>
+      </div>
+      <div class="week-days">
+        <div class="day-block">
+          <div class="day-label">Monday</div>
+          <div class="day-title">RAG: Connect AI to Your Data</div>
+          <div class="day-tools">Supabase &middot; Pinecone &middot; Claude API &middot; Cursor</div>
+          <div class="day-desc">Vector embeddings, document ingestion, semantic search. Connect your real industry documents to an AI that can reason over them.</div>
+        </div>
+        <div class="day-block">
+          <div class="day-label">Wednesday</div>
+          <div class="day-title">AI Agents + Evals</div>
+          <div class="day-tools">Claude API &middot; Cursor &middot; Braintrust</div>
+          <div class="day-desc">Agent loops, tool use, error handling, guardrails. Build evaluation frameworks: test cases, scoring rubrics, regression checks. Know when your AI works.</div>
+        </div>
+        <div class="day-block">
+          <div class="day-label">Friday</div>
+          <div class="day-title">Product 1 Ships</div>
+          <div class="day-tools">All Week 1-2 tools</div>
+          <div class="day-desc">4-minute live demo. Written feedback from instructor and cohort. Full assessment by Saturday morning.</div>
+          <div class="day-deliverable">&#10003; Product 1 live and deployed</div>
+        </div>
+      </div>
+      <div class="week-deliverable-row"><span>&#10003;</span> <strong>Product 1 ships.</strong> Industry Q&amp;A bot, CRM follow-up AI, lead response agent, or contract analyzer.</div>
+    </div>
+
+    <!-- Week 3 -->
+    <div class="week-card reveal" style="margin-top:var(--s5);">
+      <div class="week-header">
+        <div><div class="week-label">Week 3</div><div class="week-title">Interfaces + Voice. Product 2 Ships.</div></div>
+        <div class="week-deliverable-badge">Major Deliverable</div>
+      </div>
+      <div class="week-days">
+        <div class="day-block">
+          <div class="day-label">Monday</div>
+          <div class="day-title">Building Real Interfaces</div>
+          <div class="day-tools">Lovable &middot; v0 &middot; Bolt &middot; Cursor</div>
+          <div class="day-desc">AI-generated frontends. Connect backends to real UIs. Webhooks, real-time data, and interfaces a non-technical user can actually use.</div>
+        </div>
+        <div class="day-block">
+          <div class="day-label">Wednesday</div>
+          <div class="day-title">Voice &amp; Multimodal AI</div>
+          <div class="day-tools">Claude Vision &middot; ElevenLabs &middot; Whisper &middot; Cursor</div>
+          <div class="day-desc">Document ingestion and extraction. Speech-to-text with Whisper. Text-to-speech with ElevenLabs. Image and PDF processing with Claude Vision.</div>
+        </div>
+        <div class="day-block">
+          <div class="day-label">Friday</div>
+          <div class="day-title">Product 2 Ships</div>
+          <div class="day-tools">All tools</div>
+          <div class="day-desc">5-minute demo with a real interface. The bar: a non-technical person should be able to use your product without instructions.</div>
+          <div class="day-deliverable">&#10003; Product 2 live with real UI</div>
+        </div>
+      </div>
+      <div class="week-deliverable-row"><span>&#10003;</span> <strong>Product 2 ships.</strong> Client-facing chatbot, voice agent, document processor, or multimodal intake tool.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WEEK 4 -->
+<section class="section">
+  <div class="container">
+    <div class="section-label reveal">Week 4</div>
+    <h2 class="reveal">Ship &amp; Scale.<br><span class="text-accent">Capstone + Demo Day.</span></h2>
+
+    <div class="week-card reveal" style="margin-top:var(--s8);">
+      <div class="week-header">
+        <div><div class="week-label">Week 4</div><div class="week-title">Your Most Ambitious Product. Then the Stage.</div></div>
+        <div class="week-deliverable-badge">Demo Day</div>
+      </div>
+      <div class="week-days">
+        <div class="day-block">
+          <div class="day-label">Monday</div>
+          <div class="day-title">Capstone Scoping</div>
+          <div class="day-tools">All tools</div>
+          <div class="day-desc">Your most ambitious product. Combine RAG + interface, voice + agent, or build something that could be a business. Scope, plan, commit.</div>
+        </div>
+        <div class="day-block">
+          <div class="day-label">Wednesday</div>
+          <div class="day-title">Full Build Sprint</div>
+          <div class="day-tools">All tools</div>
+          <div class="day-desc">No lectures. Full build day. Deploy and demo-ready by end of day. Instructor available for 1:1 troubleshooting.</div>
+        </div>
+        <div class="day-block">
+          <div class="day-label">Friday</div>
+          <div class="day-title" style="color:var(--indigo);">DEMO DAY</div>
+          <div class="day-tools">MakerSquare HQ &middot; Austin, TX</div>
+          <div class="day-desc">Public event. Austin tech community in the room. 5 minutes each. Live demo, hard questions, real feedback from people who build and invest.</div>
+          <div class="day-deliverable">&#10003; Capstone presented to Austin investors and operators</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TOOLS -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-label reveal">Tech stack</div>
+    <h2 class="reveal">The tools you'll use.<br><span class="text-accent">All of them real.</span></h2>
+    <p class="section-sub reveal">No toy tools. Every tool in this program is used in production by real companies. You'll know when to reach for each one.</p>
+
+    <div class="tools-strip reveal" style="margin-top:var(--s8);">
+      <div class="tools-strip-title">AI &amp; LLMs</div>
+      <div class="tools-list">
+        <span class="tool-chip">Claude API</span><span class="tool-chip">ChatGPT</span><span class="tool-chip">Claude Vision</span>
+      </div>
+    </div>
+    <div class="tools-strip reveal" style="margin-top:var(--s3);">
+      <div class="tools-strip-title">Building &amp; Deployment</div>
+      <div class="tools-list">
+        <span class="tool-chip">Cursor</span><span class="tool-chip">Railway</span><span class="tool-chip">Replit</span><span class="tool-chip">Hoppscotch</span>
+      </div>
+    </div>
+    <div class="tools-strip reveal" style="margin-top:var(--s3);">
+      <div class="tools-strip-title">Data &amp; RAG</div>
+      <div class="tools-list">
+        <span class="tool-chip">Supabase</span><span class="tool-chip">Pinecone</span><span class="tool-chip">Airtable</span><span class="tool-chip">Google Sheets</span>
+      </div>
+    </div>
+    <div class="tools-strip reveal" style="margin-top:var(--s3);">
+      <div class="tools-strip-title">Interfaces</div>
+      <div class="tools-list">
+        <span class="tool-chip">Lovable</span><span class="tool-chip">v0</span><span class="tool-chip">Bolt</span>
+      </div>
+    </div>
+    <div class="tools-strip reveal" style="margin-top:var(--s3);">
+      <div class="tools-strip-title">Voice &amp; Multimodal</div>
+      <div class="tools-list">
+        <span class="tool-chip">ElevenLabs</span><span class="tool-chip">Whisper</span>
+      </div>
+    </div>
+    <div class="tools-strip reveal" style="margin-top:var(--s3);">
+      <div class="tools-strip-title">Evals &amp; Quality</div>
+      <div class="tools-list">
+        <span class="tool-chip">Braintrust</span><span class="tool-chip">Custom eval frameworks</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="page-cta reveal">
+      <h3>Three products. Four weeks.<br><span class="text-accent">Ship something real.</span></h3>
+      <p>Next cohort starts July 6, 2026 in Austin, TX. 15 seats per cohort.</p>
+      <div style="display:flex;gap:var(--s3);justify-content:center;flex-wrap:wrap;">
+        <a href="apply.html" class="btn btn-primary btn-lg btn-arrow">Apply Now </a>
+        <a href="pricing.html" class="btn btn-ghost btn-lg btn-arrow">See pricing </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <a href="index.html" class="footer-logo">Maker<span>Square</span></a>
+    <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    <div class="footer-copy">&copy; 2026 MakerSquare LLC. Austin, TX.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="text/javascript" src="https://forms.zoho.com/js/zf_gclid.js"> </script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq885ea214ffc25f4f452068cc9bc1cec4353b0ff61817b77233444928d383fe96" defer></script>
+</body>
+</html>
