@@ -94,10 +94,12 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; }
 .nav-logo { display: flex; align-items: center; }
 .nav-logo img { height: 44px; width: auto; }
 .nav-links { display: flex; gap: var(--s6); list-style: none; align-items: center; }
-.nav-links a { font-size: 0.875rem; color: var(--text-secondary); font-weight: 500; transition: color 0.2s; }
+.nav-links a { font-size: 0.875rem; color: var(--text-secondary); font-weight: 500; transition: color 0.2s; padding-bottom: 2px; border-bottom: 2px solid transparent; }
 .nav-links a:hover { color: var(--navy); }
+.nav-links a.active { color: var(--navy); font-weight: 600; border-bottom-color: var(--indigo); }
 .nav-links a.nav-apply { color: var(--indigo); font-weight: 700; }
 .nav-links a.nav-apply:hover { color: var(--indigo-hover); }
+.nav-links a.nav-apply.active { border-bottom-color: var(--indigo); }
 
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: var(--r-sm); font-family: var(--font-display); font-size: 0.875rem; font-weight: 700; transition: all 0.25s ease; }
 .btn-primary { background: var(--indigo); color: var(--white); }
