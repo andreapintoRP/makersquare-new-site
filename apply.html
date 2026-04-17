@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply to MakerSquare — AI Bootcamp Austin TX | July 2026</title>
+<meta name="description" content="Apply to MakerSquare's 4-week AI bootcamp in Austin, TX. 15 seats per cohort. No coding test. Decision within 48 hours. Starts July 2026.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.makersquare.ai/apply.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.makersquare.ai/apply.html">
+<meta property="og:title" content="Apply to MakerSquare — AI Bootcamp Austin TX">
+<meta property="og:description" content="Apply to the 4-week in-person AI bootcamp in Austin. 15 seats per cohort. No coding test. Starts July 2026.">
+<meta property="og:image" content="https://www.makersquare.ai/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── Apply-specific ── */
+.apply-quick { display: flex; gap: var(--s5); margin-top: var(--s6); flex-wrap: wrap; }
+.apply-quick-item { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: var(--text-secondary); }
+.apply-quick-icon { width: 24px; height: 24px; border-radius: 50%; background: var(--cloud); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--indigo); flex-shrink: 0; }
+
+.cohort-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s4); margin-top: var(--s9); }
+.cohort-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s6); text-align: center; transition: all 0.3s ease; position: relative; }
+.cohort-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.cohort-card--active { border-color: var(--indigo); }
+.cohort-status { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-radius: var(--r-full); padding: 3px 10px; margin-bottom: var(--s3); }
+.cohort-status--open { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+.cohort-status--soon { background: var(--cloud); color: var(--indigo); border: 1px solid var(--ice); }
+.cohort-status--early { background: var(--light-bg); color: var(--text-muted); border: 1px solid rgba(24,24,73,0.06); }
+.cohort-name { font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: var(--s1); }
+.cohort-dates { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
+.cohort-seats { font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; color: var(--indigo); margin-top: var(--s3); }
+
+.what-matters-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s8); margin-top: var(--s9); }
+.matters-list { list-style: none; display: flex; flex-direction: column; gap: var(--s4); }
+.matters-item { display: flex; gap: 12px; align-items: flex-start; }
+.matters-icon { width: 32px; height: 32px; min-width: 32px; border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; }
+.matters-icon--yes { background: var(--cloud); color: var(--indigo); }
+.matters-icon--no { background: var(--light-bg); color: var(--text-muted); }
+.matters-item h4 { font-size: 0.95rem; margin-bottom: 2px; }
+.matters-item p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
+
+.timeline-table { width: 100%; margin-top: var(--s8); border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: var(--r-xl); border: 1px solid rgba(24,24,73,0.06); }
+.timeline-table thead th { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); background: var(--navy); padding: var(--s4) var(--s5); text-align: left; }
+.timeline-table tbody td { font-size: 0.82rem; color: var(--text-secondary); padding: var(--s4) var(--s5); border-bottom: 1px solid rgba(24,24,73,0.04); background: var(--white); }
+.timeline-table tbody tr:last-child td { border-bottom: none; }
+.timeline-table tbody td:first-child { font-weight: 600; color: var(--navy); }
+.timeline-table .highlight-row td { background: var(--cloud); color: var(--navy); font-weight: 600; }
+
+.page-cta { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s10); text-align: center; margin-top: var(--s10); }
+.page-cta h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: var(--s3); }
+.page-cta p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: var(--s6); max-width: 480px; margin-left: auto; margin-right: auto; }
+
+@media (max-width: 1024px) {
+  .cohort-grid { grid-template-columns: 1fr 1fr; }
+  .what-matters-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .cohort-grid { grid-template-columns: 1fr; }
+  .timeline-table { font-size: 0.75rem; }
+  .apply-quick { flex-direction: column; gap: var(--s3); }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maker<span>Square</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#how-it-works">How it works</a></li>
+      <li><a href="index.html#who">Who it's for</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="housing.html">Housing</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="apply.html" style="color:var(--navy);">Apply</a></li>
+    </ul>
+    <a href="#form" class="btn btn-primary btn-arrow">Apply Now </a>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="index.html#how-it-works">How it works</a></li>
+    <li><a href="index.html#who">Who it's for</a></li>
+    <li><a href="curriculum.html">Curriculum</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="housing.html">Housing</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="apply.html">Apply</a></li>
+  </ul>
+  <a href="#form" class="btn btn-primary btn-block btn-lg" style="margin-top:24px;">Apply Now</a>
+</div>
+
+
+<!-- HERO -->
+<section class="section" style="padding-top:calc(var(--nav-height) + var(--s10));padding-bottom:var(--s9);">
+  <div class="container">
+    <div class="section-label reveal">Apply</div>
+    <h1 class="reveal" style="font-size:clamp(2rem,4vw,3rem);">Applications are open.<br><span class="text-gradient">Seats are limited.</span></h1>
+    <p class="section-sub reveal">We review every application personally. Cohorts are small by design. We're looking for the most motivated, not the most experienced.</p>
+
+    <div class="apply-quick reveal">
+      <div class="apply-quick-item"><div class="apply-quick-icon">&#9889;</div> Takes 10 minutes</div>
+      <div class="apply-quick-item"><div class="apply-quick-icon">&#10003;</div> No essay required</div>
+      <div class="apply-quick-item"><div class="apply-quick-icon">&#10003;</div> No coding test</div>
+      <div class="apply-quick-item"><div class="apply-quick-icon">&#9200;</div> Decision within 48 hours</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- COHORTS -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Pick your cohort</div>
+      <h2 class="reveal">One application. <span class="text-accent">Any start date.</span></h2>
+    </div>
+
+    <div class="cohort-grid">
+      <div class="cohort-card cohort-card--active reveal reveal-d1">
+        <div class="cohort-status cohort-status--open">Open Now</div>
+        <div class="cohort-name">Cohort 1</div>
+        <div class="cohort-dates">Jul 6 &ndash; Aug 1, 2026<br>Demo Day: Aug 1</div>
+        <div class="cohort-seats"><span data-count="9">0</span> of 15 spots remaining</div>
+      </div>
+      <div class="cohort-card reveal reveal-d2">
+        <div class="cohort-status cohort-status--soon">Enrolling Soon</div>
+        <div class="cohort-name">Cohort 2</div>
+        <div class="cohort-dates">Sep 14 &ndash; Oct 9, 2026<br>Demo Day: Oct 9</div>
+        <div class="cohort-seats">15 spots available</div>
+      </div>
+      <div class="cohort-card reveal reveal-d3">
+        <div class="cohort-status cohort-status--soon">Enrolling Soon</div>
+        <div class="cohort-name">Cohort 3</div>
+        <div class="cohort-dates">Oct 26 &ndash; Nov 20, 2026<br>Demo Day: Nov 20</div>
+        <div class="cohort-seats">15 spots available</div>
+      </div>
+      <div class="cohort-card reveal reveal-d4">
+        <div class="cohort-status cohort-status--early">Coming Soon</div>
+        <div class="cohort-name">Cohort 4</div>
+        <div class="cohort-dates">Jan 11 &ndash; Feb 5, 2027<br>Demo Day: Feb 5</div>
+        <div class="cohort-seats">Accepting early interest</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- THREE STEPS -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Process</div>
+      <h2 class="reveal">Three steps. <span class="text-accent">About a week.</span></h2>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card reveal reveal-d1">
+        <div class="step-num">01</div>
+        <h3>Fill out the application</h3>
+        <p>Who you are, what you do, what you want to build, why now. <span class="bl">No resume required.</span></p>
+        <span class="step-time">~10 minutes</span>
+      </div>
+      <div class="step-card reveal reveal-d2">
+        <div class="step-num">02</div>
+        <h3>Complete a take-home project</h3>
+        <p>Designed around what you already know. This is the most important part of your application.</p>
+        <span class="step-time">2&ndash;4 hours, your pace</span>
+      </div>
+      <div class="step-card reveal reveal-d3">
+        <div class="step-num">03</div>
+        <h3>Admissions interview</h3>
+        <p>A 30-minute conversation, not a test. Decision within 48 hours.</p>
+        <span class="step-time">30-min video call</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHAT WE LOOK FOR -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">What we look for</div>
+      <h2 class="reveal">Not the most experienced. <span class="text-accent">The most motivated.</span></h2>
+    </div>
+
+    <div class="what-matters-grid">
+      <div>
+        <h3 class="reveal" style="font-size:1.1rem;margin-bottom:var(--s5);color:var(--navy);">What matters</h3>
+        <ul class="matters-list">
+          <li class="matters-item reveal"><div class="matters-icon matters-icon--yes">&#10003;</div><div><h4>Domain expertise</h4><p>Years in a specific industry. Your expertise is your unfair advantage.</p></div></li>
+          <li class="matters-item reveal"><div class="matters-icon matters-icon--yes">&#10003;</div><div><h4>A specific problem to solve</h4><p>Vague answers here are the most common reason for rejection.</p></div></li>
+          <li class="matters-item reveal"><div class="matters-icon matters-icon--yes">&#10003;</div><div><h4>Willingness to show your work</h4><p>The take-home project matters more than anything else in your application.</p></div></li>
+          <li class="matters-item reveal"><div class="matters-icon matters-icon--yes">&#10003;</div><div><h4>Full commitment to the schedule</h4><p>Mon/Wed/Fri 9am-3pm + 10-15 hrs/week outside class.</p></div></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="reveal" style="font-size:1.1rem;margin-bottom:var(--s5);color:var(--text-muted);">What doesn't matter</h3>
+        <ul class="matters-list">
+          <li class="matters-item reveal"><div class="matters-icon matters-icon--no">&mdash;</div><div><h4 style="color:var(--text-muted);">Prior coding experience</h4></div></li>
+          <li class="matters-item reveal"><div class="matters-icon matters-icon--no">&mdash;</div><div><h4 style="color:var(--text-muted);">Prior AI experience</h4></div></li>
+          <li class="matters-item reveal"><div class="matters-icon matters-icon--no">&mdash;</div><div><h4 style="color:var(--text-muted);">A tech degree</h4></div></li>
+          <li class="matters-item reveal"><div class="matters-icon matters-icon--no">&mdash;</div><div><h4 style="color:var(--text-muted);">A fully formed startup idea</h4></div></li>
+          <li class="matters-item reveal"><div class="matters-icon matters-icon--no">&mdash;</div><div><h4 style="color:var(--text-muted);">Age, career stage, or job title</h4></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- DEADLINES TABLE -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Deadlines</div>
+      <h2 class="reveal">Key dates for <span class="text-accent">each cohort.</span></h2>
+    </div>
+
+    <div style="overflow-x:auto;">
+      <table class="timeline-table reveal">
+        <thead>
+          <tr><th>Milestone</th><th>Cohort 1</th><th>Cohort 2</th><th>Cohort 3</th><th>Cohort 4</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Applications open</td><td>Now</td><td>Jul 2026</td><td>Aug 2026</td><td>Nov 2026</td></tr>
+          <tr><td>Application deadline</td><td>Jun 15</td><td>Aug 22</td><td>Oct 5</td><td>Dec 20</td></tr>
+          <tr><td>Enrollment deadline</td><td>Jun 22</td><td>Sep 1</td><td>Oct 14</td><td>Dec 28</td></tr>
+          <tr class="highlight-row"><td>Day 1</td><td>Jul 6</td><td>Sep 14</td><td>Oct 26</td><td>Jan 11</td></tr>
+          <tr class="highlight-row"><td>Demo Day</td><td>Aug 1</td><td>Oct 9</td><td>Nov 20</td><td>Feb 5</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- SCHOLARSHIP -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr auto;gap:var(--s8);align-items:center;">
+      <div>
+        <div class="section-label reveal">Scholarship</div>
+        <h2 class="reveal" style="font-size:clamp(1.4rem,2.5vw,1.8rem);">Military, first responders, and educators.</h2>
+        <p class="reveal" style="color:var(--text-secondary);margin-top:var(--s2);font-size:0.95rem;"><span class="bl">$1,500 off tuition</span>, bringing it to $4,499. No separate application beyond verifying eligibility.</p>
+      </div>
+      <div class="reveal">
+        <a href="scholarship.html" class="btn btn-ghost btn-lg btn-arrow">Learn more </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- APPLICATION FORM -->
+<section class="section" id="form">
+  <div class="container">
+    <div style="max-width:640px;margin:0 auto;text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Start your application</div>
+      <h2 class="reveal">Takes about <span class="text-accent">10 minutes.</span></h2>
+
+      <!-- FORM PLACEHOLDER -->
+      <div class="reveal" style="border:2px dashed rgba(24,24,73,0.1);border-radius:var(--r-lg);padding:var(--s10) var(--s6);margin-top:var(--s8);">
+        <p style="margin:0;font-weight:600;color:var(--navy);font-family:var(--font-display);">Zoho Application Form Embed</p>
+        <p style="margin:8px 0 0;font-size:0.82rem;color:var(--text-muted);">Replace this div with your Zoho form embed code</p>
+      </div>
+
+      <p style="margin-top:var(--s5);font-size:0.88rem;color:var(--text-secondary);">Questions? <a href="mailto:hello@makersquare.ai" style="color:var(--indigo);font-weight:600;">hello@makersquare.ai</a></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Application FAQ</div>
+      <h2 class="reveal">Common questions <span class="text-accent">about applying.</span></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-question">Do I need a technical background?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">No. We've had doctors, lawyers, real estate agents, and marketing directors build exceptional AI products. Domain expertise matters more than technical skills.</div></div></div>
+
+      <div class="faq-item reveal"><button class="faq-question">What's the take-home project like?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">2-4 hours at your own pace. We're evaluating your thinking and willingness to ship, not technical proficiency. It's designed around what you already know.</div></div></div>
+
+      <div class="faq-item reveal"><button class="faq-question">How selective is the program?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">10-15 builders per cohort. The most common reason for rejection is a vague problem statement. The take-home project matters more than the written application.</div></div></div>
+
+      <div class="faq-item reveal"><button class="faq-question">I'm coming from out of town. Is that okay?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Absolutely. We have a <a href="housing.html" style="color:var(--indigo);font-weight:600;">housing program</a> with partner Airbnb hosts and discounted rates near campus.</div></div></div>
+
+      <div class="faq-item reveal"><button class="faq-question">What if I'm not admitted?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">We provide specific feedback so you know what to strengthen. You can reapply for any future cohort, and we keep a waitlist for current cohorts.</div></div></div>
+
+      <div class="faq-item reveal"><button class="faq-question">What's the refund policy?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Full refund (minus $1,000 deposit) up to 14 days before start. 50% up to Day 1. No refund after the program begins.</div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <a href="index.html" class="footer-logo">Maker<span>Square</span></a>
+    <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    <div class="footer-copy">&copy; 2026 MakerSquare LLC. Austin, TX.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="text/javascript" src="https://forms.zoho.com/js/zf_gclid.js"> </script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq885ea214ffc25f4f452068cc9bc1cec4353b0ff61817b77233444928d383fe96" defer></script>
+</body>
+</html>
