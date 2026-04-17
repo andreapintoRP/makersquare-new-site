@@ -47,13 +47,16 @@
 .hood-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s4); margin-top: var(--s8); }
 .hood-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-lg); padding: var(--s5); transition: all 0.3s ease; }
 .hood-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--ice); }
-.hood-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+.hood-card { text-decoration: none; display: block; }
+.hood-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 2px; display: flex; align-items: center; justify-content: space-between; }
+.hood-arrow { font-size: 0.85rem; color: var(--indigo); opacity: 0; transition: opacity 0.2s, transform 0.2s; }
+.hood-card:hover .hood-arrow { opacity: 1; transform: translateX(3px); }
 .hood-dist { font-size: 0.75rem; font-weight: 600; color: var(--indigo); margin-bottom: var(--s2); }
 .hood-desc { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
 
 .setup-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s5); margin-top: var(--s8); }
 .setup-step { text-align: center; }
-.setup-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--cloud); margin-bottom: var(--s2); }
+.setup-num { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--white); background: var(--indigo); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--s3); }
 .setup-step h3 { font-size: 0.95rem; margin-bottom: var(--s2); }
 .setup-step p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
 
@@ -272,12 +275,12 @@
     <h2 class="reveal">Best Austin neighborhoods <span class="text-accent">for builders.</span></h2>
 
     <div class="hood-grid">
-      <div class="hood-card reveal reveal-d1"><div class="hood-name">East Austin</div><div class="hood-dist">~10 min to campus</div><div class="hood-desc">Coffee shops, coworking, walkable. Most popular with MakerSquare builders.</div></div>
-      <div class="hood-card reveal reveal-d2"><div class="hood-name">South Congress</div><div class="hood-dist">~15 min to campus</div><div class="hood-desc">Great food, quieter pace, easy parking. SoCo feel.</div></div>
-      <div class="hood-card reveal reveal-d3"><div class="hood-name">Mueller / Hyde Park</div><div class="hood-dist">~12 min to campus</div><div class="hood-desc">Walkable, family-friendly, quieter residential streets.</div></div>
-      <div class="hood-card reveal reveal-d4"><div class="hood-name">Domain / North Austin</div><div class="hood-dist">~20 min to campus</div><div class="hood-desc">Suburban, bigger apartments, good for families.</div></div>
-      <div class="hood-card reveal reveal-d5"><div class="hood-name">Downtown / Rainey St</div><div class="hood-dist">~10 min to campus</div><div class="hood-desc">Nightlife, networking, higher cost. Central to everything.</div></div>
-      <div class="hood-card reveal reveal-d6"><div class="hood-name">South Lamar</div><div class="hood-dist">~15 min to campus</div><div class="hood-desc">Residential quiet, restaurant corridor, good balance.</div></div>
+      <a href="https://www.google.com/maps/place/East+Austin,+Austin,+TX/" target="_blank" rel="noopener" class="hood-card reveal reveal-d1"><div class="hood-name">East Austin <span class="hood-arrow">&rarr;</span></div><div class="hood-dist">~10 min to campus</div><div class="hood-desc">Coffee shops, coworking, walkable. Most popular with MakerSquare builders.</div></a>
+      <a href="https://www.google.com/maps/place/South+Congress+Ave,+Austin,+TX/" target="_blank" rel="noopener" class="hood-card reveal reveal-d2"><div class="hood-name">South Congress <span class="hood-arrow">&rarr;</span></div><div class="hood-dist">~15 min to campus</div><div class="hood-desc">Great food, quieter pace, easy parking. SoCo feel.</div></a>
+      <a href="https://www.google.com/maps/place/Mueller,+Austin,+TX/" target="_blank" rel="noopener" class="hood-card reveal reveal-d3"><div class="hood-name">Mueller / Hyde Park <span class="hood-arrow">&rarr;</span></div><div class="hood-dist">~12 min to campus</div><div class="hood-desc">Walkable, family-friendly, quieter residential streets.</div></a>
+      <a href="https://www.google.com/maps/place/The+Domain,+Austin,+TX/" target="_blank" rel="noopener" class="hood-card reveal reveal-d4"><div class="hood-name">Domain / North Austin <span class="hood-arrow">&rarr;</span></div><div class="hood-dist">~20 min to campus</div><div class="hood-desc">Suburban, bigger apartments, good for families.</div></a>
+      <a href="https://www.google.com/maps/place/Rainey+Street,+Austin,+TX/" target="_blank" rel="noopener" class="hood-card reveal reveal-d5"><div class="hood-name">Downtown / Rainey St <span class="hood-arrow">&rarr;</span></div><div class="hood-dist">~10 min to campus</div><div class="hood-desc">Nightlife, networking, higher cost. Central to everything.</div></a>
+      <a href="https://www.google.com/maps/place/South+Lamar+Blvd,+Austin,+TX/" target="_blank" rel="noopener" class="hood-card reveal reveal-d6"><div class="hood-name">South Lamar <span class="hood-arrow">&rarr;</span></div><div class="hood-dist">~15 min to campus</div><div class="hood-desc">Residential quiet, restaurant corridor, good balance.</div></a>
     </div>
   </div>
 </section>
