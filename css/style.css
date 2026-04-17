@@ -220,8 +220,9 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; }
 .bento-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--s5); margin-top: var(--s9); }
 .bento-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s8); transition: all 0.3s ease; position: relative; overflow: hidden; }
 .bento-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--ice); }
-.bento-icon { width: 48px; height: 48px; border-radius: var(--r-md); background: var(--cloud); border: 1px solid var(--ice); display: flex; align-items: center; justify-content: center; color: var(--indigo); margin-bottom: var(--s5); transition: background 0.3s; }
-.bento-card:hover .bento-icon { background: rgba(64,61,216,0.1); }
+.bento-icon { width: 52px; height: 52px; border-radius: var(--r-md); background: linear-gradient(135deg, var(--cloud) 0%, rgba(64,61,216,0.08) 100%); border: 1px solid var(--ice); display: flex; align-items: center; justify-content: center; color: var(--indigo); margin-bottom: var(--s5); transition: all 0.3s; box-shadow: 0 2px 8px rgba(64,61,216,0.06), inset 0 1px 0 rgba(255,255,255,0.8); position: relative; }
+.bento-icon::after { content: ''; position: absolute; inset: 0; border-radius: var(--r-md); background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, transparent 50%); pointer-events: none; }
+.bento-card:hover .bento-icon { background: linear-gradient(135deg, rgba(64,61,216,0.12) 0%, rgba(64,61,216,0.06) 100%); box-shadow: 0 4px 12px rgba(64,61,216,0.12), inset 0 1px 0 rgba(255,255,255,0.6); transform: translateY(-1px); }
 .bento-card h3 { margin-bottom: var(--s2); }
 .bento-card p { font-size: 0.925rem; color: var(--text-secondary); line-height: 1.7; }
 /* Visual filler card */
@@ -276,8 +277,8 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; }
 .demo-content p { font-size: 1rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: var(--s3); }
 .demo-highlights { display: flex; flex-direction: column; gap: var(--s3); margin-top: var(--s5); }
 .demo-highlight { display: flex; align-items: flex-start; gap: 12px; font-size: 0.925rem; color: var(--text-secondary); }
-.demo-highlight-icon { width: 28px; height: 28px; min-width: 28px; border-radius: var(--r-sm); background: var(--cloud); display: flex; align-items: center; justify-content: center; color: var(--indigo); }
-.demo-highlight-icon svg { width: 14px; height: 14px; }
+.demo-highlight-icon { width: 32px; height: 32px; min-width: 32px; border-radius: var(--r-sm); background: linear-gradient(135deg, var(--cloud) 0%, rgba(64,61,216,0.08) 100%); border: 1px solid var(--ice); display: flex; align-items: center; justify-content: center; color: var(--indigo); box-shadow: 0 2px 6px rgba(64,61,216,0.06), inset 0 1px 0 rgba(255,255,255,0.7); }
+.demo-highlight-icon svg { width: 15px; height: 15px; }
 
 /* ══════════════════════════════════════════════════════════════════════════════
    PRICING
