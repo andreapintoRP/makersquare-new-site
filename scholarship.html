@@ -39,12 +39,23 @@
 .how-step h3 { font-size: 0.95rem; margin-bottom: var(--s2); }
 .how-step p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
 
-.included-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s6); margin-top: var(--s8); }
-.included-col h3 { font-family: var(--font-display); font-size: 0.92rem; font-weight: 700; color: var(--navy); margin-bottom: var(--s4); }
-.included-item { display: flex; align-items: flex-start; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--s3); line-height: 1.5; }
-.included-item::before { content: '\2713'; color: var(--green); font-weight: 700; font-size: 0.75rem; margin-top: 2px; flex-shrink: 0; }
-.not-included-item { display: flex; align-items: flex-start; gap: 8px; font-size: 0.85rem; color: var(--text-muted); margin-bottom: var(--s3); line-height: 1.5; }
-.not-included-item::before { content: '\2014'; flex-shrink: 0; }
+.included-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s5); margin-top: var(--s8); }
+.included-card { border-radius: var(--r-xl); padding: var(--s7); }
+.included-card--yes { background: var(--green-bg); border: 1px solid var(--green-border); }
+.included-card--no { background: var(--light-bg); border: 1px solid rgba(24,24,73,0.06); }
+.included-card h3 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; margin-bottom: var(--s5); display: flex; align-items: center; gap: 8px; }
+.included-card--yes h3 { color: #166534; }
+.included-card--no h3 { color: var(--text-muted); }
+.included-icon { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; }
+.included-icon--yes { background: var(--green); color: var(--white); }
+.included-icon--no { background: rgba(24,24,73,0.08); color: var(--text-muted); }
+.included-item { display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; margin-bottom: var(--s4); line-height: 1.5; }
+.included-card--yes .included-item { color: #15803d; }
+.included-card--no .included-item { color: var(--text-muted); }
+.included-item:last-child { margin-bottom: 0; }
+.included-item-icon { font-size: 0.72rem; font-weight: 700; margin-top: 3px; flex-shrink: 0; }
+.included-card--yes .included-item-icon { color: var(--green); }
+.included-card--no .included-item-icon { color: var(--text-muted); }
 
 .page-cta { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s10); text-align: center; margin-top: var(--s10); }
 .page-cta h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: var(--s3); }
@@ -183,20 +194,25 @@
 <!-- WHAT'S COVERED -->
 <section class="section">
   <div class="container">
+    <div style="text-align:center;margin-bottom:var(--s3);">
+      <div class="section-label reveal" style="justify-content:center;">Details</div>
+      <h2 class="reveal">What's covered. <span class="text-accent">What's not.</span></h2>
+    </div>
+
     <div class="included-grid">
-      <div class="reveal">
-        <h3>What the scholarship covers</h3>
-        <div class="included-item">$1,500 off the $5,999 standard tuition, bringing it to $4,499</div>
-        <div class="included-item">Available on all payment plan options (discount applies to the total)</div>
-        <div class="included-item">Stackable with employer reimbursement</div>
-        <div class="included-item">Full access to everything in the standard program</div>
+      <div class="included-card included-card--yes reveal">
+        <h3><span class="included-icon included-icon--yes">&#10003;</span> What the scholarship covers</h3>
+        <div class="included-item"><span class="included-item-icon">&#10003;</span> $1,500 off the $5,999 standard tuition, bringing it to <strong>$4,499</strong></div>
+        <div class="included-item"><span class="included-item-icon">&#10003;</span> Available on all payment plan options (discount applies to total)</div>
+        <div class="included-item"><span class="included-item-icon">&#10003;</span> Stackable with employer reimbursement</div>
+        <div class="included-item"><span class="included-item-icon">&#10003;</span> Full access to everything in the standard program</div>
       </div>
-      <div class="reveal">
-        <h3 style="color:var(--text-muted);">What it doesn't cover</h3>
-        <div class="not-included-item">API costs during the program (~$20-50, paid separately)</div>
-        <div class="not-included-item">Housing (see our <a href="housing.html" style="color:var(--indigo);">housing page</a> for partner options)</div>
-        <div class="not-included-item">Cannot be combined with other MakerSquare discount codes</div>
-        <div class="not-included-item">Subject to seat availability in the cohort</div>
+      <div class="included-card included-card--no reveal">
+        <h3><span class="included-icon included-icon--no">&mdash;</span> What it doesn't cover</h3>
+        <div class="included-item"><span class="included-item-icon">&mdash;</span> API costs during the program (~$20-50, paid separately)</div>
+        <div class="included-item"><span class="included-item-icon">&mdash;</span> Housing (<a href="housing.html" style="color:var(--indigo);font-weight:600;">partner discounts available</a>)</div>
+        <div class="included-item"><span class="included-item-icon">&mdash;</span> Cannot be combined with other discount codes</div>
+        <div class="included-item"><span class="included-item-icon">&mdash;</span> Subject to seat availability in the cohort</div>
       </div>
     </div>
   </div>
