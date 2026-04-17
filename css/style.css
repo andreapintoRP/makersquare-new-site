@@ -114,7 +114,8 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; }
 .nav-social a:hover { color: var(--indigo); background: var(--cloud); }
 .nav-social svg { width: 16px; height: 16px; fill: currentColor; }
 
-.footer-social { display: flex; gap: var(--s3); margin-top: var(--s4); }
+.footer-social { display: flex; align-items: center; gap: var(--s3); margin-top: var(--s4); }
+.footer-social-label { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
 .footer-social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); transition: all 0.2s; }
 .footer-social a:hover { background: rgba(255,255,255,0.12); color: var(--white); }
 .footer-social svg { width: 16px; height: 16px; fill: currentColor; }
