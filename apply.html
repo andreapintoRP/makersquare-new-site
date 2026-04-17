@@ -42,12 +42,33 @@
 .matters-item h4 { font-size: 0.95rem; margin-bottom: 2px; }
 .matters-item p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
 
-.timeline-table { width: 100%; margin-top: var(--s8); border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: var(--r-xl); border: 1px solid rgba(24,24,73,0.06); }
-.timeline-table thead th { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); background: var(--navy); padding: var(--s4) var(--s5); text-align: left; }
-.timeline-table tbody td { font-size: 0.82rem; color: var(--text-secondary); padding: var(--s4) var(--s5); border-bottom: 1px solid rgba(24,24,73,0.04); background: var(--white); }
-.timeline-table tbody tr:last-child td { border-bottom: none; }
-.timeline-table tbody td:first-child { font-weight: 600; color: var(--navy); }
-.timeline-table .highlight-row td { background: var(--cloud); color: var(--navy); font-weight: 600; }
+/* Timeline accordion */
+.ta-item { border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); margin-bottom: var(--s4); overflow: hidden; background: var(--white); transition: all 0.3s ease; }
+.ta-item:hover { border-color: var(--ice); }
+.ta-item.open { border-color: var(--indigo); box-shadow: var(--shadow-md); }
+.ta-header { display: flex; align-items: center; gap: var(--s4); padding: var(--s5) var(--s6); cursor: pointer; user-select: none; }
+.ta-header-info { flex: 1; }
+.ta-cohort-tag { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--indigo); }
+.ta-cohort-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: var(--navy); }
+.ta-cohort-range { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+.ta-badge { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-radius: var(--r-full); padding: 4px 10px; white-space: nowrap; flex-shrink: 0; }
+.ta-badge.open { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+.ta-badge.soon { background: var(--cloud); color: var(--indigo); border: 1px solid var(--ice); }
+.ta-badge.coming { background: var(--light-bg); color: var(--text-muted); border: 1px solid rgba(24,24,73,0.06); }
+.ta-chevron { font-size: 1.2rem; color: var(--text-muted); transition: transform 0.3s; flex-shrink: 0; }
+.ta-item.open .ta-chevron { transform: rotate(180deg); }
+.ta-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.ta-body-inner { padding: 0 var(--s6) var(--s6); }
+
+.tl { position: relative; padding-left: 28px; }
+.tl::before { content: ''; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 2px; background: var(--ice); border-radius: 2px; }
+.tl-item { position: relative; padding-bottom: var(--s5); }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot { position: absolute; left: -28px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--cloud); border: 2px solid var(--ice); z-index: 1; }
+.tl-item--active .tl-dot { background: var(--indigo); border-color: var(--indigo); box-shadow: 0 0 0 4px rgba(64,61,216,0.15); }
+.tl-item--highlight .tl-dot { background: var(--green); border-color: var(--green); box-shadow: 0 0 0 4px rgba(34,197,94,0.15); }
+.tl-date { font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; color: var(--navy); }
+.tl-desc { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
 
 .page-cta { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s10); text-align: center; margin-top: var(--s10); }
 .page-cta h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: var(--s3); }
@@ -217,27 +238,89 @@
 </section>
 
 
-<!-- DEADLINES TABLE -->
+<!-- DEADLINES ACCORDION -->
 <section class="section">
   <div class="container">
     <div style="text-align:center;">
-      <div class="section-label reveal" style="justify-content:center;">Deadlines</div>
-      <h2 class="reveal">Key dates for <span class="text-accent">each cohort.</span></h2>
+      <div class="section-label reveal" style="justify-content:center;">Key dates</div>
+      <h2 class="reveal">Deadlines for <span class="text-accent">each cohort.</span></h2>
     </div>
 
-    <div style="overflow-x:auto;">
-      <table class="timeline-table reveal">
-        <thead>
-          <tr><th>Milestone</th><th>Cohort 1</th><th>Cohort 2</th><th>Cohort 3</th><th>Cohort 4</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Applications open</td><td>Now</td><td>Jul 2026</td><td>Aug 2026</td><td>Nov 2026</td></tr>
-          <tr><td>Application deadline</td><td>Jun 15</td><td>Aug 22</td><td>Oct 5</td><td>Dec 20</td></tr>
-          <tr><td>Enrollment deadline</td><td>Jun 22</td><td>Sep 1</td><td>Oct 14</td><td>Dec 28</td></tr>
-          <tr class="highlight-row"><td>Day 1</td><td>Jul 6</td><td>Sep 14</td><td>Oct 26</td><td>Jan 11</td></tr>
-          <tr class="highlight-row"><td>Demo Day</td><td>Aug 1</td><td>Oct 9</td><td>Nov 20</td><td>Feb 5</td></tr>
-        </tbody>
-      </table>
+    <div style="margin-top:var(--s8);max-width:720px;margin-left:auto;margin-right:auto;">
+
+      <!-- Cohort 1 -->
+      <div class="ta-item open reveal" data-ta>
+        <div class="ta-header" onclick="this.parentElement.classList.toggle('open');var b=this.parentElement.querySelector('.ta-body');b.style.maxHeight=this.parentElement.classList.contains('open')?b.scrollHeight+'px':'0';">
+          <div class="ta-header-info"><div class="ta-cohort-tag">Cohort 1</div><div class="ta-cohort-name">July 2026</div><div class="ta-cohort-range">Jul 6 &ndash; Aug 1 &middot; Demo Day Aug 1</div></div>
+          <span class="ta-badge open">Open Now</span>
+          <div class="ta-chevron">&#9660;</div>
+        </div>
+        <div class="ta-body" style="max-height:500px;"><div class="ta-body-inner">
+          <div class="tl">
+            <div class="tl-item tl-item--active"><div class="tl-dot"></div><div class="tl-date">Now &middot; Applications Open</div><div class="tl-desc">Submit any time. Early applicants get priority review.</div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Rolling &middot; Take-Home + Interviews</div><div class="tl-desc">Reviewed on a rolling basis. Interview within 1 week of submission.</div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Jun 15 &middot; Final Application Deadline</div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Jun 22 &middot; Enrollment Deadline</div><div class="tl-desc">$1,000 deposit + remaining tuition due.</div></div>
+            <div class="tl-item tl-item--highlight"><div class="tl-dot"></div><div class="tl-date">Jul 6 &middot; Day 1</div></div>
+            <div class="tl-item tl-item--highlight"><div class="tl-dot"></div><div class="tl-date">Aug 1 &middot; Demo Day</div><div class="tl-desc">Present your capstone to Austin's tech community.</div></div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- Cohort 2 -->
+      <div class="ta-item reveal" data-ta>
+        <div class="ta-header" onclick="this.parentElement.classList.toggle('open');var b=this.parentElement.querySelector('.ta-body');b.style.maxHeight=this.parentElement.classList.contains('open')?b.scrollHeight+'px':'0';">
+          <div class="ta-header-info"><div class="ta-cohort-tag">Cohort 2</div><div class="ta-cohort-name">September 2026</div><div class="ta-cohort-range">Sep 14 &ndash; Oct 9 &middot; Demo Day Oct 9</div></div>
+          <span class="ta-badge soon">Enrolling Soon</span>
+          <div class="ta-chevron">&#9660;</div>
+        </div>
+        <div class="ta-body"><div class="ta-body-inner">
+          <div class="tl">
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Jul 2026 &middot; Applications Open</div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Aug 22 &middot; Application Deadline</div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Sep 1 &middot; Enrollment Deadline</div></div>
+            <div class="tl-item tl-item--highlight"><div class="tl-dot"></div><div class="tl-date">Sep 14 &middot; Day 1</div></div>
+            <div class="tl-item tl-item--highlight"><div class="tl-dot"></div><div class="tl-date">Oct 9 &middot; Demo Day</div></div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- Cohort 3 -->
+      <div class="ta-item reveal" data-ta>
+        <div class="ta-header" onclick="this.parentElement.classList.toggle('open');var b=this.parentElement.querySelector('.ta-body');b.style.maxHeight=this.parentElement.classList.contains('open')?b.scrollHeight+'px':'0';">
+          <div class="ta-header-info"><div class="ta-cohort-tag">Cohort 3</div><div class="ta-cohort-name">October 2026</div><div class="ta-cohort-range">Oct 26 &ndash; Nov 20 &middot; Demo Day Nov 20</div></div>
+          <span class="ta-badge soon">Enrolling Soon</span>
+          <div class="ta-chevron">&#9660;</div>
+        </div>
+        <div class="ta-body"><div class="ta-body-inner">
+          <div class="tl">
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Aug 2026 &middot; Applications Open</div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Oct 5 &middot; Application Deadline</div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Oct 14 &middot; Enrollment Deadline</div></div>
+            <div class="tl-item tl-item--highlight"><div class="tl-dot"></div><div class="tl-date">Oct 26 &middot; Day 1</div></div>
+            <div class="tl-item tl-item--highlight"><div class="tl-dot"></div><div class="tl-date">Nov 20 &middot; Demo Day</div></div>
+          </div>
+        </div></div>
+      </div>
+
+      <!-- Cohort 4 -->
+      <div class="ta-item reveal" data-ta>
+        <div class="ta-header" onclick="this.parentElement.classList.toggle('open');var b=this.parentElement.querySelector('.ta-body');b.style.maxHeight=this.parentElement.classList.contains('open')?b.scrollHeight+'px':'0';">
+          <div class="ta-header-info"><div class="ta-cohort-tag">Cohort 4</div><div class="ta-cohort-name">January 2027</div><div class="ta-cohort-range">Jan 11 &ndash; Feb 5 &middot; Demo Day Feb 5</div></div>
+          <span class="ta-badge coming">Coming Soon</span>
+          <div class="ta-chevron">&#9660;</div>
+        </div>
+        <div class="ta-body"><div class="ta-body-inner">
+          <div class="tl">
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Nov 2026 &middot; Applications Open</div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Dec 20 &middot; Application Deadline</div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Dec 28 &middot; Enrollment Deadline</div></div>
+            <div class="tl-item tl-item--highlight"><div class="tl-dot"></div><div class="tl-date">Jan 11 &middot; Day 1</div></div>
+            <div class="tl-item tl-item--highlight"><div class="tl-dot"></div><div class="tl-date">Feb 5 &middot; Demo Day</div></div>
+          </div>
+        </div></div>
+      </div>
+
     </div>
   </div>
 </section>
