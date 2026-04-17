@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporate AI Training Austin — MakerSquare | 2-Week Team Intensive</title>
+<meta name="description" content="Private AI training for teams. 2-week intensive in Austin or on-site. Your team builds a real AI tool for your business. 8-20 people per cohort. Custom curriculum.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.makersquare.ai/corporate.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.makersquare.ai/corporate.html">
+<meta property="og:title" content="Corporate AI Training — MakerSquare Austin">
+<meta property="og:description" content="2-week AI intensive for teams. Custom curriculum, dedicated instructor, real deployed tool by Day 10.">
+<meta property="og:image" content="https://www.makersquare.ai/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── Corporate-specific ── */
+.corp-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: var(--s4); margin-top: var(--s8); }
+.corp-stat { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-lg); padding: var(--s5); text-align: center; transition: all 0.3s ease; }
+.corp-stat:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.corp-stat-num { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--indigo); margin-bottom: 2px; }
+.corp-stat-label { font-size: 0.75rem; color: var(--text-muted); }
+
+.outcomes-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s5); margin-top: var(--s8); }
+.outcome-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s7); transition: all 0.3s ease; text-align: center; }
+.outcome-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.outcome-icon { font-size: 1.5rem; margin-bottom: var(--s3); }
+.outcome-card h3 { font-size: 1rem; margin-bottom: var(--s2); }
+.outcome-card p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+
+.week-split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s5); margin-top: var(--s8); }
+.week-block { border-radius: var(--r-xl); padding: var(--s8); }
+.week-block--1 { background: var(--cloud); border: 1px solid var(--ice); }
+.week-block--2 { background: var(--navy); color: var(--white); }
+.week-block-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: var(--s3); }
+.week-block--1 .week-block-label { color: var(--indigo); }
+.week-block--2 .week-block-label { color: var(--sky); }
+.week-block h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; margin-bottom: var(--s4); }
+.week-block--2 h3 { color: var(--white); }
+.week-block-list { list-style: none; display: flex; flex-direction: column; gap: var(--s3); }
+.week-block-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.88rem; line-height: 1.5; }
+.week-block--1 .week-block-list li { color: var(--text-secondary); }
+.week-block--2 .week-block-list li { color: rgba(255,255,255,0.75); }
+.week-block-list li::before { content: '\2713'; font-weight: 700; font-size: 0.72rem; margin-top: 3px; flex-shrink: 0; }
+.week-block--1 .week-block-list li::before { color: var(--indigo); }
+.week-block--2 .week-block-list li::before { color: var(--sky); }
+
+.example-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--s5); margin-top: var(--s8); }
+.example-card { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s6); transition: all 0.3s ease; display: flex; gap: var(--s5); align-items: flex-start; }
+.example-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--ice); }
+.example-icon { width: 48px; height: 48px; min-width: 48px; border-radius: var(--r-md); background: var(--cloud); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+.example-industry { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--indigo); margin-bottom: var(--s1); }
+.example-card h3 { font-size: 0.95rem; margin-bottom: var(--s2); }
+.example-card p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
+.example-result { font-size: 0.78rem; font-weight: 600; color: var(--green); margin-top: var(--s2); }
+
+.process-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s5); margin-top: var(--s8); }
+.process-step { text-align: center; }
+.process-step-num { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--white); background: var(--indigo); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--s3); }
+.process-step h3 { font-size: 0.95rem; margin-bottom: var(--s2); }
+.process-step p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+
+.page-cta { background: var(--white); border: 1px solid rgba(24,24,73,0.06); border-radius: var(--r-xl); padding: var(--s10); text-align: center; margin-top: var(--s10); }
+.page-cta h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: var(--s3); }
+.page-cta p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: var(--s6); max-width: 480px; margin-left: auto; margin-right: auto; }
+
+@media (max-width: 1024px) { .week-split, .example-grid { grid-template-columns: 1fr; } .outcomes-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .corp-stats { grid-template-columns: 1fr 1fr; } .process-steps { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maker<span>Square</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#how-it-works">How it works</a></li>
+      <li><a href="index.html#who">Who it's for</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="housing.html">Housing</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="apply.html">Apply</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary btn-arrow">Get in Touch </a>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="index.html#how-it-works">How it works</a></li>
+    <li><a href="index.html#who">Who it's for</a></li>
+    <li><a href="curriculum.html">Curriculum</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="housing.html">Housing</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="apply.html">Apply</a></li>
+  </ul>
+  <a href="#contact" class="btn btn-primary btn-block btn-lg" style="margin-top:24px;">Get in Touch</a>
+</div>
+
+
+<!-- HERO -->
+<section class="section" style="padding-top:calc(var(--nav-height) + var(--s10));padding-bottom:var(--s9);">
+  <div class="container">
+    <div class="section-label reveal">Corporate Training</div>
+    <h1 class="reveal" style="font-size:clamp(2rem,4vw,3rem);">The best investment you can make<br><span class="text-gradient">is the people already in it.</span></h1>
+    <p class="section-sub reveal" style="max-width:620px;">Your people know the business. A 2-week AI intensive gives them the tools to do twice as much.</p>
+
+    <div class="corp-stats">
+      <div class="corp-stat reveal reveal-d1"><div class="corp-stat-num">2 weeks</div><div class="corp-stat-label">Full-time intensive</div></div>
+      <div class="corp-stat reveal reveal-d2"><div class="corp-stat-num">1 tool</div><div class="corp-stat-label">Built for your business</div></div>
+      <div class="corp-stat reveal reveal-d3"><div class="corp-stat-num">8-20</div><div class="corp-stat-label">People per cohort</div></div>
+      <div class="corp-stat reveal reveal-d4"><div class="corp-stat-num">Day 10</div><div class="corp-stat-label">Team presents to leadership</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHAT CHANGES -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">After two weeks</div>
+      <h2 class="reveal">Specific outcomes. <span class="text-accent">Not vague skills.</span></h2>
+    </div>
+
+    <div class="outcomes-grid">
+      <div class="outcome-card reveal reveal-d1">
+        <div class="outcome-icon">&#9889;</div>
+        <h3>Tasks: hours to minutes</h3>
+        <p>Work that used to take your team half a day gets done in the time it takes to review the output.</p>
+      </div>
+      <div class="outcome-card reveal reveal-d2">
+        <div class="outcome-icon">&#128640;</div>
+        <h3>A live tool for your workflows</h3>
+        <p>Not a prototype. A deployed tool built on your data, for your processes, used starting Day 11.</p>
+      </div>
+      <div class="outcome-card reveal reveal-d3">
+        <div class="outcome-icon">&#128200;</div>
+        <h3>Capability that compounds</h3>
+        <p>Your team learns to identify and build AI solutions independently. The ROI grows every month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TWO WEEKS -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">The program</div>
+      <h2 class="reveal">Two weeks. Full days. <span class="text-accent">No fluff.</span></h2>
+      <p class="section-sub reveal" style="margin:var(--s3) auto 0;">Mon-Fri. On-site at your office or in Austin.</p>
+    </div>
+
+    <div class="week-split">
+      <div class="week-block week-block--1 reveal reveal-d1">
+        <div class="week-block-label">Week 1 &middot; Learn</div>
+        <h3>How AI works. Applied to your work.</h3>
+        <ul class="week-block-list">
+          <li>How AI models work (the intuition, not the math)</li>
+          <li>Prompt engineering for real business tasks</li>
+          <li>AI applied to your team's actual daily work</li>
+          <li>Identify automation opportunities across the org</li>
+          <li>Scope the project your team will build in Week 2</li>
+        </ul>
+      </div>
+      <div class="week-block week-block--2 reveal reveal-d2">
+        <div class="week-block-label">Week 2 &middot; Build</div>
+        <h3>Build and deploy a real tool.</h3>
+        <ul class="week-block-list">
+          <li>Full build sprint on the scoped project</li>
+          <li>No-code and low-code AI tools</li>
+          <li>Connect to your real data and systems</li>
+          <li>Test, refine, document for maintenance</li>
+          <li>Present the deployed tool to leadership</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CASE STUDIES -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Examples</div>
+      <h2 class="reveal">Built for your business. <span class="text-accent">Not a template.</span></h2>
+      <p class="section-sub reveal" style="margin:var(--s3) auto 0;">Pre-work scoping with leadership. Your team builds during Week 2. Deployed on infrastructure you control.</p>
+    </div>
+
+    <div class="example-grid">
+      <div class="example-card reveal reveal-d1">
+        <div class="example-icon">&#9878;</div>
+        <div>
+          <div class="example-industry">Law Firm</div>
+          <h3>AI research assistant</h3>
+          <p>Search case law, summarize findings, draft memos from precedent.</p>
+          <div class="example-result">60% reduction in research time</div>
+        </div>
+      </div>
+      <div class="example-card reveal reveal-d2">
+        <div class="example-icon">&#127968;</div>
+        <div>
+          <div class="example-industry">Real Estate Operations</div>
+          <h3>Automated lease abstraction</h3>
+          <p>Extract terms, flag anomalies, populate database automatically.</p>
+          <div class="example-result">Eliminates 4 hrs manual review per property</div>
+        </div>
+      </div>
+      <div class="example-card reveal reveal-d3">
+        <div class="example-icon">&#128181;</div>
+        <div>
+          <div class="example-industry">Financial Services</div>
+          <h3>Client reporting assistant</h3>
+          <p>Pull data, draft narratives, format branded PDFs automatically.</p>
+          <div class="example-result">3 hours reduced to 20 minutes</div>
+        </div>
+      </div>
+      <div class="example-card reveal reveal-d4">
+        <div class="example-icon">&#128101;</div>
+        <div>
+          <div class="example-industry">Staffing Agency</div>
+          <h3>Candidate screening tool</h3>
+          <p>Read resumes, score fit, draft recruiter notes at scale.</p>
+          <div class="example-result">1 recruiter does the work of 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">How it works</div>
+      <h2 class="reveal">From first call to <span class="text-accent">deployed tool.</span></h2>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step reveal reveal-d1">
+        <div class="process-step-num">01</div>
+        <h3>Discovery Call</h3>
+        <p>45 minutes. We learn your workflows, your team, and where AI would have the most impact.</p>
+      </div>
+      <div class="process-step reveal reveal-d2">
+        <div class="process-step-num">02</div>
+        <h3>Pre-Work Scoping</h3>
+        <p>2-3 days. We work with leadership to define the exact tool your team will build.</p>
+      </div>
+      <div class="process-step reveal reveal-d3">
+        <div class="process-step-num">03</div>
+        <h3>Two-Week Intensive</h3>
+        <p>10 days, Mon-Fri. Week 1: learn. Week 2: build. Day 10: present to leadership.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">FAQ</div>
+      <h2 class="reveal">Questions we <span class="text-accent">hear often.</span></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-question">Do team members need a technical background?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">No. The program is designed for non-technical professionals. Lawyers, account managers, operations leads, recruiters, finance teams. Domain expertise is the advantage.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Can you come to our office?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. On-site delivery is available for groups of 12 or more. We bring the instructor, materials, and infrastructure. Your team stays in their environment.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Who owns what the team builds?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Your company. 100%. Everything built during the intensive is your IP, deployed on infrastructure you control.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">What if we have more than 20 people?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">We run sequential cohorts or a multi-cohort plan. For 50+ people, we design a phased rollout. Contact us for details.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Can you work within our security requirements?<span class="faq-chevron">&#9660;</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. We work within your data security and compliance requirements. If your team can't use external APIs, we adapt the curriculum to approved tools.</div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div style="max-width:600px;margin:0 auto;text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Get started</div>
+      <h2 class="reveal">Tell us about <span class="text-accent">your team.</span></h2>
+      <p class="reveal" style="font-size:0.9rem;color:var(--text-secondary);margin-top:var(--s2);margin-bottom:var(--s6);">We respond within one business day with a 45-minute discovery call.</p>
+
+      <!-- FORM PLACEHOLDER -->
+      <div class="reveal" style="border:2px dashed rgba(24,24,73,0.1);border-radius:var(--r-lg);padding:var(--s10) var(--s6);">
+        <p style="margin:0;font-weight:600;color:var(--navy);font-family:var(--font-display);">Zoho Corporate Inquiry Form</p>
+        <p style="margin:8px 0 0;font-size:0.82rem;color:var(--text-muted);">Replace this div with your Zoho form embed code</p>
+      </div>
+
+      <div class="reveal" style="margin-top:var(--s7);display:flex;gap:var(--s6);justify-content:center;flex-wrap:wrap;font-size:0.88rem;color:var(--text-muted);">
+        <span>Austin, TX or on-site</span>
+        <span>&middot;</span>
+        <a href="mailto:hello@makersquare.ai" style="color:var(--indigo);font-weight:600;">hello@makersquare.ai</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <a href="index.html" class="footer-logo">Maker<span>Square</span></a>
+    <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    <div class="footer-copy">&copy; 2026 MakerSquare LLC. Austin, TX.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="text/javascript" src="https://forms.zoho.com/js/zf_gclid.js"> </script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq885ea214ffc25f4f452068cc9bc1cec4353b0ff61817b77233444928d383fe96" defer></script>
+</body>
+</html>
